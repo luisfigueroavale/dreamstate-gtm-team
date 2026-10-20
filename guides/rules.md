@@ -21,6 +21,8 @@ Read this file through the GitHub connector, branch `main`, in `luisfigueroavale
 
 ## Standing actions that still need a yes
 
+Outward and standing tools always need a yes, including when the price is 0.
+
 These do not raise `approval_required`. Name the object and wait anyway.
 
 Read the current rules first. This call replaces the whole set: `social.outreach.keyword_dm_rules.replace`.
@@ -29,7 +31,39 @@ Also: `social.feeds.create`, `tables.table_sources.schedule_set`, `tables.auto_r
 
 External even at zero credits: `senders.mailboxes.placement_test` (sends a probe email), `social.linkedin_account_invite`, `social.linkedin.connection_invite`, `social.advocacy.engage`, `integrations.calendar.events_create`, `visibility.radar.scan_execute`, `visibility.analytics_refresh`.
 
-`visibility.research.web_search` costs 2 credits and may refuse dry_run. Use the paid-read rule above.
+## Paid tools
+
+`dyn` is the price the dry run quotes. A paid read with no dry_run still shows this price and waits.
+
+- `crm.signals.search_run` — dyn ≤1,000,000
+- `crm.enrichment.backfill` — dyn ≤25
+- `crm.record_enrichment.create` — dyn ≤25
+- `crm.records.tool_run` — dyn ≤25
+- `knowledge.first_win.warm_queue` — 0.5 cr
+- `knowledge.brain.knowledge.synthesize` — 1 cr
+- `visibility.research.urls_fetch` — 1 cr
+- `visibility.research.web_search` — 2 cr
+- `senders.mailboxes.purchase` — $ (quote)
+- `social.content.compose` — 9–27 cr
+- `social.posts.comment_publish` — 2 cr
+- `social.content.assist` — 9 cr
+- `social.content.generate` — 9 cr
+- `tables.table_runs.create` — dyn ≤25
+- `tables.columns.run` — dyn ≤25
+- `tables.columns.run_remaining` — dyn ≤25
+- `tables.table_sources.run` — dyn ≤25
+- `tables.contacts.verify_email` — 3 cr/item ≤300
+- `tables.columns.run_all` — dyn ≤25
+- `tables.table_runs.resume` — dyn ≤25
+- `tables.table_runs.retry` — dyn ≤25
+- `unibox.inbox.analyze` — 1 cr
+- `visibility.probe.start` — 59.6 cr
+- `visibility.refresh` — 0.31 cr
+- `workflow.workflows.call` — dyn ≤25
+
+## Second brain
+
+Company Context pages use `knowledge.brain.context.compose_pages` (dry_run, then a yes). A markdown note uses `knowledge.vault.ingest`, which only creates: a second call duplicates it. `knowledge.brain.knowledge.compose_document` revises a document. There is no repo sync. `integrations.github_repository_configure` is publishing config only.
 
 ## Skills
 
@@ -52,7 +86,7 @@ Grok Bot shares connections across seats. A seat uses only its row.
 | Head of Content | `knowledge`, `social`, `visibility` | X read tools below. |
 | LinkedIn Writer | `social`, `knowledge` | None. |
 | X Writer | `social`, `knowledge` | X read tools below. |
-| YouTube Writer | `knowledge` | Google Drive, read-only, for footage the owner stored. |
+| YouTube Writer | `social`, `visibility`, `senders`, `knowledge` | Google Drive, read-only, for footage the owner stored. |
 | Graphic Designer | `social`, `knowledge`, `workspace` | Google Drive, read-only, for photos the owner stored. |
 
 X read tools, for the four seats named above, are read-only: `search_posts_all`, `get_users_posts`, `get_posts_reposted_by`, `get_posts_quoted_posts`, `get_posts_counts_recent`, `get_trends_by_woeid`. Never post, like, follow, or DM through X.

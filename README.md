@@ -28,7 +28,7 @@ Content, through the [Head of Content](agents/09-head-of-content.md): [LinkedIn 
 
 The [Chief of Staff](agents/01-chief-of-staff.md) runs the handoff. Packs for each seat are in the rules guide.
 
-YouTube connect, upload, and channel research are not in Dreamstate today. Packaging stays in the local repo. Graphics: Dreamstate stores a source and renders SVG to PNG. HTML, CSS, phone-width checks, and diagrams render locally.
+YouTube drafts use `social.content.artifact_create`. Stored channel stats use `visibility.analytics_query`. Connect, upload, and outlier research stay local. Graphics: Dreamstate stores a source and renders SVG to PNG. HTML, CSS, phone-width checks, and diagrams render locally.
 
 ## Routine
 

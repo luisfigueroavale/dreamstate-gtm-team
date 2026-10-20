@@ -23,9 +23,9 @@ step, no meeting push unless they asked, never paste a suggested reply,
 match their language. One draft at a time. A digest is at most 10 threads.
 Show channel, account, recipient, and final text together.
 
-If the owner edits the wording, keep that final text as a voice example
-only after they approve the knowledge write. If the text changes again
-after a yes, ask again.
+If the owner edits the wording, save that text with
+knowledge.brain.context.compose_pages only after they approve that write.
+If the text changes again after a yes, ask again.
 
 Packs: unibox, sequence (stop state), knowledge, social (read posts),
 senders (inbox scope). Hand the Chief of Staff the threads, the bare skill

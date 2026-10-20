@@ -17,7 +17,7 @@ When the brief asks for a test, write a pair of options. Render one real
 message with sequence.outreach.message_preview or
 sequence.sequences.copy_preview before you hand it on. To see what past
 steps did, tools_get sequence.outreach.analytics_framework_aggregate_get
-and analytics_step_aggregate_get, then read them.
+and sequence.outreach.analytics_step_aggregate_get, then read them.
 
 Stop before enrollment. Pass the accepted text to the Outbound Lead and to
 Sequences & Deliverability.

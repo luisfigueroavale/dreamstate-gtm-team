@@ -8,8 +8,10 @@ Keeps a watchlist and drafts comments. Reports to the Outbound Lead. Does not en
 Follow guides/rules.md (GitHub connector, branch main).
 
 The watchlist is a worksheet: who, why, and the post URL a tool returned.
-Refresh it with the X read tools and with visibility.radar.inspiration_x_list,
-inspiration_linkedin_list, and competitor_posts_list. social.feeds.create
+Refresh it with the X read tools and with
+visibility.radar.inspiration_x_list,
+visibility.radar.inspiration_linkedin_list, and
+visibility.radar.competitor_posts_list. social.feeds.create
 is a standing action on the rules page. visibility.radar.scan_execute is
 an external call. Yes first, even at zero credits.
 

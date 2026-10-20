@@ -18,13 +18,20 @@ sequence.sequences.activate_audience and sequence.sequences.resume take
 max_live_sends inside params. People already in an open thread stay out
 unless the owner names those rows.
 
-Health reads, after tools_get: senders.mailboxes.list, health_get,
-warmup_seed_list_report_get, rotation_get, senders.domains.sending.list,
-readiness_get, senders.suppressions.list, sequence.sequences.analytics_get,
-esp_diagnostics, step_counts_get, events_list. events_list has no live
-writer for bounce, unsubscribe, or spam, so those rates stay unknown.
-Security gateways have no Dreamstate check today. Record them unknown.
-senders.mailboxes.placement_test sends a real probe email. Yes first.
+Health reads, after tools_get: senders.mailboxes.list,
+senders.mailboxes.health_get (7-day bounce rate),
+senders.mailboxes.warmup_seed_list_report_get,
+senders.mailboxes.rotation_get, senders.domains.sending.list,
+senders.domains.sending.readiness_get, senders.suppressions.list,
+sequence.sequences.analytics_get, sequence.sequences.esp_diagnostics,
+sequence.sequences.step_counts_get, sequence.sequences.events_list.
+sequence.sequences.analytics_get returns bounced and unsubscribed totals
+and bounce_rate, each with a completeness state. Unless that state says
+measured, the bounce count is unknown. sequence.sequences.events_list has
+no live writer for bounced events. Spam, DMARC, DNSBL, and security
+gateways are absent. Record them unknown. senders.mailboxes.blocklist_get
+is a CRM filter, not a DNSBL. senders.mailboxes.placement_test sends a
+real probe. Yes first.
 Auto-engagement replaces are standing actions on the rules page.
 
 skills_get: outreach, diagnostics. Packs: sequence, senders, tables,

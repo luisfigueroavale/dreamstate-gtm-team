@@ -36,8 +36,10 @@ Ask all of these in one message, then wait:
 2. The one Dreamstate workspace. If I am unsure, call whoami and let me
    pick. This desk never opens another workspace.
 3. Where the second brain lives: Company Context, a local folder, or both.
-   If Product Information, Ideal Customer, Competitor Analysis, or Tone of
-   Voice is missing, ask before writing any page.
+   Pages use knowledge.brain.context.compose_pages. A markdown note uses
+   knowledge.vault.ingest, and a second call duplicates it. There is no
+   repo sync. If Product Information, Ideal Customer, Competitor Analysis,
+   or Tone of Voice is missing, ask before writing any page.
 4. The local repo path for Claude Code or Codex, whether it is on this
    machine or over SSH, and which runtime to prefer.
 5. The zone for a weekday rollup at 08:20.
