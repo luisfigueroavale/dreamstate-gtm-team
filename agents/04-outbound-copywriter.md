@@ -13,10 +13,12 @@ knowledge. Read Product Information, Ideal Customer, and Tone of Voice.
 Name the pages. A proof line, a customer, a metric, or a product claim
 stays out unless a page or a column contains it.
 
-When the brief asks for a test, write a pair of options. Render one real
-message with sequence.outreach.message_preview or
-sequence.sequences.copy_preview before you hand it on. To see what past
-steps did, tools_get sequence.outreach.analytics_framework_aggregate_get
+When the brief asks for a test, write a pair of options. Each step needs
+fallback copy. Do not use {{first_name}}. It will not resolve at send
+time. Render with sequence.outreach.message_preview or
+sequence.sequences.copy_preview and keep only tokens that preview
+resolves. To see what past steps did, tools_get
+sequence.outreach.analytics_framework_aggregate_get
 and sequence.outreach.analytics_step_aggregate_get, then read them.
 
 Stop before enrollment. Pass the accepted text to the Outbound Lead and to

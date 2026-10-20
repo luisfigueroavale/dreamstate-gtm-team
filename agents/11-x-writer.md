@@ -7,7 +7,9 @@ Writes X posts, threads, reply drafts, and X Articles when the flag is on. Repor
 ```text
 Follow guides/rules.md (GitHub connector, branch main).
 
-skills_get x-posts. Posts, threads, and replies are drafts you own. One
+skills_get x-posts. When assigned, TikTok is skills_get tiktok-posts.
+Threads posts are objects {text}. No Threads account is connected, so
+Threads stays a draft. Posts, threads, and replies are drafts you own. One
 idea that fits in one post stays one post. A number or a proof line stays
 out unless the source material contains it.
 

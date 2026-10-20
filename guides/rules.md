@@ -2,7 +2,7 @@
 
 Every seat follows this page. A charter only adds a lane, connectors, and handoffs. When a skill and a charter or this page disagree, the stricter rule wins.
 
-Read this file through the GitHub connector, branch `main`, in `luisfigueroavale/dreamstate-gtm-team`. The repo is private.
+Read this file through the GitHub connector in `luisfigueroavale/dreamstate-gtm-team`. The repo is private. Branch `main` has these files only after the desk pull request has merged. Until then, `main` has only the README, so use the ref that contains `guides/` and `agents/`.
 
 ## Consent
 
@@ -17,7 +17,7 @@ Read this file through the GitHub connector, branch `main`, in `luisfigueroavale
 - Report only figures a tool returned. Unknown is not zero.
 - Do not generate, retouch, or replace the owner's face or body. Portrait pixels come from photos the owner supplied.
 - Production, a merge, and a deploy wait for a yes on that action.
-- One Grok Bot routine: weekdays at 08:20, the outbound rollup. If the app lets only the Chief of Staff own routines, that seat owns it and the text tells the Outbound Lead to run the rollup. No second routine, and no Dreamstate recurring trigger, without its own yes.
+- One Grok Bot routine: weekdays at 08:20, the outbound rollup. If the app lets only the Chief of Staff own routines, that seat owns it and the text tells the Outbound Lead to run the rollup. No second routine, and no Dreamstate recurring trigger, without its own yes. `workflow.custom_agents.routine_create` is a second routine. Do not call it without that yes.
 
 ## Standing actions that still need a yes
 
@@ -29,12 +29,20 @@ Read the current rules first. This call replaces the whole set: `social.outreach
 
 Also: `social.feeds.create`, `tables.table_sources.schedule_set`, `tables.auto_run.set`, `sequence.linkedin.auto_engagements.replace`, `sequence.x.auto_engagements.replace`, `tables.profile_watcher.create`, `tables.profile_watcher.resume`.
 
-External even at zero credits: `senders.mailboxes.placement_test` (sends a probe email), `social.linkedin_account_invite`, `social.linkedin.connection_invite`, `social.advocacy.engage`, `integrations.calendar.events_create`, `visibility.radar.scan_execute`, `visibility.analytics_refresh`.
+External even at zero credits: `senders.mailboxes.placement_test` (sends a probe email), `social.linkedin_account_invite`, `social.linkedin.connection_invite`, `social.advocacy.engage`, `integrations.calendar.events_create`, `visibility.radar.scan_execute`, `visibility.analytics_refresh`, `tables.x_post_engagers.run` (calls X).
+
+Also need a yes: `social.amplification.get`, `social.engagement.comment`, `social.engagement.react`, `social.posts.create`, `workflow.runtime_agents.trigger_create`, `workflow.agent_sessions.activate`, `workflow.agent_sessions.run`, `workspace.copilot.policy_set`, `unibox.whatsapp.drafts_approve` (sends), `crm.sync.enable`, `senders.connect.start`, `senders.mailboxes.warmup_enable`, `senders.mailboxes.deliverability_auto_enroll`, `knowledge.repositories.connect`, `knowledge.repositories.sync`.
 
 ## Paid tools
 
 `dyn` is the price the dry run quotes. A paid read with no dry_run still shows this price and waits.
 
+- `crm.contact.find_phone` — 50 cr
+- `crm.contact.find_personal_email` — 3 cr
+- `crm.contact.find_linkedin` — 1 cr
+- `crm.contact.find_person` — 0.45 cr
+- `crm.contact.find_email` — up to 25
+- `crm.contact.find_company` — dyn ≤25
 - `crm.signals.search_run` — dyn ≤1,000,000
 - `crm.enrichment.backfill` — dyn ≤25
 - `crm.record_enrichment.create` — dyn ≤25
@@ -60,14 +68,15 @@ External even at zero credits: `senders.mailboxes.placement_test` (sends a probe
 - `visibility.probe.start` — 59.6 cr
 - `visibility.refresh` — 0.31 cr
 - `workflow.workflows.call` — dyn ≤25
+- `workspace.copilot.send` — dyn ≤25
 
 ## Second brain
 
-Company Context pages use `knowledge.brain.context.compose_pages` (dry_run, then a yes). A markdown note uses `knowledge.vault.ingest`, which only creates: a second call duplicates it. `knowledge.brain.knowledge.compose_document` revises a document. There is no repo sync. `integrations.github_repository_configure` is publishing config only.
+Company Context pages use `knowledge.brain.context.compose_pages` (dry_run, then a yes). A markdown note uses `knowledge.vault.ingest`, which only creates: a second call duplicates it. `knowledge.brain.knowledge.compose_document` revises a document. A GitHub mount is `knowledge.repositories.connect`, then `knowledge.repositories.sync`. Both call GitHub and need a yes. `integrations.github_repository_configure` is publishing config only.
 
 ## Skills
 
-`skills_get` takes the bare id (`plays`), not `dreamstate:plays`. The `dreamstate` skill is not in the workspace. Read `skills/dreamstate/SKILL.md` from [luisfigueroavale/dreamstate-plugins](https://github.com/luisfigueroavale/dreamstate-plugins).
+`skills_get` takes the bare id (`plays`), not `dreamstate:plays`. The `dreamstate` skill is not in the workspace. Read `skills/dreamstate/SKILL.md` from [luisfigueroavale/dreamstate-plugins](https://github.com/luisfigueroavale/dreamstate-plugins). Channel copy skills: `youtube-posts`, `instagram-posts`, `tiktok-posts`, `facebook-posts`.
 
 ## Connectors
 

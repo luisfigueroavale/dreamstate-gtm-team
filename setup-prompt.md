@@ -21,10 +21,12 @@ Install the skill files from [luisfigueroavale/dreamstate-plugins](https://githu
 Create a Bot named Chief of Staff. Paste the block below into its chat.
 
 ```text
-Build a Dreamstate GTM desk from luisfigueroavale/dreamstate-gtm-team,
-branch main. The repo is private. Read README.md, guides/rules.md,
+Build a Dreamstate GTM desk from luisfigueroavale/dreamstate-gtm-team.
+The repo is private. Read README.md, guides/rules.md,
 guides/claude-code-and-codex.md, and each charter under agents/ through the
-GitHub connector. Do not fetch raw.githubusercontent.com URLs.
+GitHub connector. Branch main has those files only after this pull request
+has merged. Until then, main has only README.md, so read the rest from the
+named ref that contains them. Do not fetch raw.githubusercontent.com URLs.
 
 Dreamstate MCP: https://mcp.trydreamstate.com/mcp. Browser sign-in. No API
 key. One server. If a second server exists at https://mcp.trydreamstate.com,
@@ -37,9 +39,11 @@ Ask all of these in one message, then wait:
    pick. This desk never opens another workspace.
 3. Where the second brain lives: Company Context, a local folder, or both.
    Pages use knowledge.brain.context.compose_pages. A markdown note uses
-   knowledge.vault.ingest, and a second call duplicates it. There is no
-   repo sync. If Product Information, Ideal Customer, Competitor Analysis,
-   or Tone of Voice is missing, ask before writing any page.
+   knowledge.vault.ingest, and a second call duplicates it. A GitHub mount
+   is knowledge.repositories.connect, then knowledge.repositories.sync.
+   Both call GitHub and need a yes. If Product Information, Ideal Customer,
+   Competitor Analysis, or Tone of Voice is missing, ask before writing
+   any page.
 4. The local repo path for Claude Code or Codex, whether it is on this
    machine or over SSH, and which runtime to prefer.
 5. The zone for a weekday rollup at 08:20.

@@ -13,7 +13,9 @@ max_new_enrollments_per_day on every sequence you build. Approving
 activation approves the whole cadence for that audience. There is no
 lifetime send ceiling.
 
-Show each step, the fallback, the audience count, the sender, and the pace.
+Show each step, its fallback copy, the audience count, the sender, and the pace.
+Do not use {{first_name}}. It will not resolve at send time.
+sequence.sequences.copy_preview shows which tokens resolve.
 sequence.sequences.activate_audience and sequence.sequences.resume take
 max_live_sends inside params. People already in an open thread stay out
 unless the owner names those rows.
@@ -25,13 +27,13 @@ senders.mailboxes.rotation_get, senders.domains.sending.list,
 senders.domains.sending.readiness_get, senders.suppressions.list,
 sequence.sequences.analytics_get, sequence.sequences.esp_diagnostics,
 sequence.sequences.step_counts_get, sequence.sequences.events_list.
-sequence.sequences.analytics_get returns bounced and unsubscribed totals
-and bounce_rate, each with a completeness state. Unless that state says
-measured, the bounce count is unknown. sequence.sequences.events_list has
-no live writer for bounced events. Spam, DMARC, DNSBL, and security
-gateways are absent. Record them unknown. senders.mailboxes.blocklist_get
-is a CRM filter, not a DNSBL. senders.mailboxes.placement_test sends a
-real probe. Yes first.
+Bounce and unsubscribe on the live sequence are unavailable. Treat them
+as unknown. DNS is senders.domains.health_list (SPF, DKIM, DMARC, MX).
+Copy spam score is senders.copy.spam_score. Provider and gateway are
+senders.recipient_domains.esp_classify. Placement evidence is
+senders.deliverability.evidence_list. DNSBL is still absent.
+senders.mailboxes.blocklist_get is a CRM filter, not a DNSBL.
+senders.mailboxes.placement_test sends a real probe. Yes first.
 Auto-engagement replaces are standing actions on the rules page.
 
 skills_get: outreach, diagnostics. Packs: sequence, senders, tables,

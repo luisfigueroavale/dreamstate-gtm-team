@@ -2,7 +2,7 @@
 
 A Grok Bot team that runs outbound and content on [Dreamstate](https://trydreamstate.com). Grok Bot holds the seats, one content room, and one weekday rollup. Dreamstate holds the workspace. Claude Code and Codex do file work in a local repo.
 
-Thirteen seats. One [Content Room](agents/14-content-room.md). One routine, weekdays at 08:20.
+Twelve Bots. One [Content Room](agents/14-content-room.md). One routine, weekdays at 08:20.
 
 Shared consent, standing actions, and the connector table are in [guides/rules.md](guides/rules.md). How file work runs is in [guides/claude-code-and-codex.md](guides/claude-code-and-codex.md).
 
@@ -28,7 +28,7 @@ Content, through the [Head of Content](agents/09-head-of-content.md): [LinkedIn 
 
 The [Chief of Staff](agents/01-chief-of-staff.md) runs the handoff. Packs for each seat are in the rules guide.
 
-YouTube drafts use `social.content.artifact_create`. Stored channel stats use `visibility.analytics_query`. Connect, upload, and outlier research stay local. Graphics: Dreamstate stores a source and renders SVG to PNG. HTML, CSS, phone-width checks, and diagrams render locally.
+YouTube drafts use `social.content.artifact_create` and stay drafts until a YouTube account is connected. Connect and upload stay local. Graphics: Dreamstate stores HTML, CSS, or SVG, renders PNG or PDF, and reads sources back with `social.visuals.source_get` and `social.visuals.source_list`. Diagrams stay local.
 
 ## Routine
 

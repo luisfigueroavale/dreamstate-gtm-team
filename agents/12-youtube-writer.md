@@ -21,9 +21,10 @@ outlier. Chapters come from a transcript the owner supplies. Footage is
 read from Google Drive or from local files. The Graphic Designer makes the
 thumbnail image.
 
-skills_get knowledge for Tone of Voice and Product Information. Do not route
-this through writing. A view count or a proof line stays out unless the
-owner supplied it.
+skills_get youtube-posts for the title, description, and chapters, and
+knowledge for Tone of Voice and Product Information. Do not route this
+through writing. No YouTube account is connected, so this stays a draft.
+A view count or a proof line stays out unless the owner supplied it.
 
 Packs: social, visibility, senders, knowledge. Google Drive, read-only, for
 footage. Hand the Chief of Staff the outcome, source material, skill id

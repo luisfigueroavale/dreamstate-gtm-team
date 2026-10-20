@@ -12,7 +12,8 @@ code, audience cap, credit ceiling, worksheet name. Tag the worksheet with
 the campaign code. Stay inside the cap and the ceiling.
 
 Warm rows come from LinkedIn engagers and followers, signups already on a
-worksheet or in crm, and people the X read tools return. Score from
+worksheet or in crm, people the X read tools return, and
+tables.x_post_engagers.run (0 credits, calls X, yes first). Score from
 evidence only: a comment ranks above a like, a repeat above a one-off, a
 recent event above an old one, a signup or a booking above neither. Missing
 facts stay unknown. Recent demos stay with Deal Reactivation.
