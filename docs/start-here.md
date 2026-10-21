@@ -40,7 +40,7 @@ Social Engagement keeps a watchlist and drafts comments. The watchlist is a work
 
 ### Reply Manager
 
-The Reply Manager drafts replies in LinkedIn threads that already exist, and in email when you name that thread. It reports open threads to the 08:00 rollup. It takes threads that need a human reply. It checks that the sequence is stopped before it drafts. If the sequence is active or the stop state is unknown, it says so and does not offer a send. One draft at a time. A digest is at most 10 threads. It shows the channel, the account, the recipient, and the final text together. Voice for a reply: answer their last message, usually under 240 characters, one next step, no meeting push unless they asked, never paste a suggested reply, and match their language. It hands the Chief of Staff the threads, the skill, and the guardrails. The guardrails are draft only. You approve each draft by name. It never writes a cold first touch or a public post. It has no routine of its own. Its charter does not name a boss. That is an open item. Full charter: [seats/07-reply-manager.md](../seats/07-reply-manager.md).
+The Reply Manager drafts replies in LinkedIn threads that already exist, and in email when you name that thread. It reports open threads to the 08:00 rollup. It takes threads that need a human reply. It checks that the sequence is stopped before it drafts. If the sequence is active or the stop state is unknown, it says so and does not offer a send. One draft at a time. A digest is at most 10 threads. It shows the channel, the account, the recipient, and the final text together. Voice for a reply: answer their last message, usually under 240 characters, one next step, no meeting push unless they asked, never paste a suggested reply, and match their language. It hands the Chief of Staff the threads, the skill, and the guardrails. The guardrails are draft only. You approve each draft by name. It never writes a cold first touch or a public post. It has no routine of its own. The seat file says it answers to you, on call. Full charter: [seats/07-reply-manager.md](../seats/07-reply-manager.md).
 
 ### Deal Reactivation
 
@@ -48,7 +48,7 @@ Deal Reactivation finds quiet past deals and drafts one follow-up. It answers to
 
 ### Head of Content
 
-The Head of Content sets the week's plan and routes each item. It reads Product Information, Ideal Customer, and Tone of Voice. It plans LinkedIn, X, and YouTube from those pages. Each item has a channel, an angle, a source, a seat, a deadline, and the proof it may use. LinkedIn, and also Instagram and Facebook, go to the LinkedIn Writer. X, and also Threads and TikTok, go to the X Writer. The video package goes to the YouTube Writer. The image goes to the Graphic Designer. Reddit only when you ask. It then uses the Reddit skill, and you post it. It marks a day with the plan tool. Clearing that mark is not a schedule. A schedule is a later yes that sets a post to go out. YouTube items are drafts. YouTube and Threads stay drafts until an account is connected. It hands the Chief of Staff the goal, the inputs, the skill, and the guardrails. It never writes the final post, the package, or the image. The weekday trend brief stays off unless you say you will read it each weekday morning. Full charter: [seats/09-head-of-content.md](../seats/09-head-of-content.md).
+The Head of Content sets the week's plan and routes each item. It reads Product Information, Ideal Customer, and Tone of Voice. It plans LinkedIn, X, and YouTube from those pages, and from outlier posts in the niche plus your recent results when those tools return them. Each item has a channel, an angle, a source, a seat, a deadline, and the proof it may use. LinkedIn, and also Instagram and Facebook, go to the LinkedIn Writer. X, and also Threads and TikTok, go to the X Writer. The video package goes to the YouTube Writer. The image goes to the Graphic Designer. Reddit only when you ask. It then uses the Reddit skill, and you post it. It marks a day with the plan tool. Clearing that mark is not a schedule. A schedule is a later yes that sets a post to go out. YouTube items are drafts. YouTube and Threads stay drafts until an account is connected. It hands the Chief of Staff the goal, the inputs, the skill, and the guardrails. It never writes the final post, the package, or the image. The weekday trend brief stays off unless you say you will read it each weekday morning. Full charter: [seats/09-head-of-content.md](../seats/09-head-of-content.md).
 
 ### LinkedIn Writer
 
@@ -80,7 +80,7 @@ You go to the Outbound Lead for the outbound lane. It reports to the Chief of St
 
 You go to the Head of Content for the content lane. It reports to the Chief of Staff. It sets the week's plan and routes each item to a writer. You do not have to brief the LinkedIn Writer, the X Writer, the YouTube Writer, or the Graphic Designer one by one.
 
-You call the Reply Manager when a LinkedIn thread already exists, or when you want a reply in an email thread you name. You call Deal Reactivation when you want quiet past deals looked at. Deal Reactivation answers to you. The Reply Manager's charter does not name a boss. Neither seat has a routine of its own. Deal Reactivation runs when you ask. The Reply Manager runs when you ask, and the Outbound Lead also asks it during the 08:00 rollup, because that seat owns live threads.
+You call the Reply Manager when a LinkedIn thread already exists, or when you want a reply in an email thread you name. You call Deal Reactivation when you want quiet past deals looked at. Both answer to you. The Reply Manager is on call. Neither seat has a routine of its own. Deal Reactivation runs when you ask. The Reply Manager runs when you ask, and the Outbound Lead also asks it during the 08:00 rollup, because that seat owns live threads.
 
 ## Who talks to who
 
@@ -97,8 +97,8 @@ flowchart TD
   room[Content Room]
 
   owner -->|oversees| cos
-  owner -->|oversees| deals
-  owner -.->|you call when a thread is waiting| reply
+  owner -->|oversees, on call| deals
+  owner -->|oversees, on call| reply
   cos -->|oversees| ol
   cos -->|oversees| hoc
   ol -->|oversees| ls[Lead Sourcer]
@@ -126,7 +126,7 @@ Reporting lines the files name:
 - The Head of Content reports to the Chief of Staff.
 - The LinkedIn Writer, the X Writer, the YouTube Writer, and the Graphic Designer report to the Head of Content.
 - Deal Reactivation answers to you. Quiet deals stay with it. If you want a sequence for one of those leads, it hands that job to the Outbound Lead.
-- The Reply Manager's file does not say who it reports to. Open item. What the file does say: it reports open threads into the 08:00 rollup, the Outbound Lead asks it then, and it owns live threads.
+- The Reply Manager answers to you, on call. It reports open threads into the 08:00 rollup. The Outbound Lead asks it then, and it owns live threads.
 
 The Content Room is a group chat. It has no seat above it and no seat under it. The six members are in the diagram. Outbound seats are outside the room. The room holds pointers. The draft lives elsewhere, and the room does not publish.
 

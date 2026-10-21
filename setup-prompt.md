@@ -1,4 +1,4 @@
-# Stand up a Dreamstate GTM desk
+# Import the Dreamstate GTM team
 
 The prompt below is for any Dreamstate customer. Read the files from branch `main`, through the GitHub connector or a raw URL. At the end, setup gives the owner the map in [docs/start-here.md](docs/start-here.md), in plain words, using the names and ids it created.
 
@@ -23,7 +23,7 @@ Create a Bot named Chief of Staff. Paste the block below into its chat.
 The block tells that Bot to explain the desk in plain language before the six questions. The explanation covers the team, each seat, Dreamstate and the one server, Company Context, Claude Code or Codex and the plugin skill files, and the 08:00 rollup. Each question says why it is asked. The final report says what each created item does, what the app refused, and what you still need to do. It then gives the same map as [docs/start-here.md](docs/start-here.md), filled in with the names and ids it created, and points at that file. The map covers who does what, who you talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. The consent rules stay as written in [docs/rules.md](docs/rules.md).
 
 ```text
-Build a Dreamstate GTM desk from luisfigueroavale/dreamstate-gtm-team,
+Build a Dreamstate GTM team from luisfigueroavale/dreamstate-gtm-team,
 branch main. Read README.md, docs/rules.md, docs/claude-code-and-codex.md,
 docs/start-here.md, and each charter under seats/ from branch main,
 through the GitHub connector or a raw URL.
@@ -71,7 +71,9 @@ Orientation, in this order:
   - YouTube Writer packages a video: title options, a thumbnail brief, a
     description, and chapters. It does not upload.
   - Graphic Designer builds graphics, thumbnail frames, carousels, and
-    diagrams. It does not write the caption that ships.
+    diagrams. A GIF or MP4 is optional. It does not write the caption
+    that ships. The steps in docs/design-playbook.md are optional, and
+    design/brand.md stays a blank form.
   - Content Room is the content group chat. It holds pointers (channel,
     angle, file, deadline), not the draft. It does not publish.
 - Dreamstate is the workspace that holds pages, tables, sequences, and
@@ -110,7 +112,7 @@ why you are asking:
    Why: the seats read this so a draft names the right product and the
    right reader.
 2. The one Dreamstate workspace. If I am unsure, call whoami and let me
-   pick. This desk never opens another workspace.
+   pick. This team never opens another workspace.
    Why: one workspace keeps every seat on the same pages and rows.
 3. Where the second brain lives: Company Context, a local folder, or both.
    Pages use knowledge.brain.context.compose_pages. A markdown note uses
@@ -198,6 +200,10 @@ After I answer:
     Company Context into a committed file. Only include steps the files
     support.
 ```
+
+## After setup
+
+Sign in to Dreamstate once in Grok Bot's connector settings. Every seat sees that connection, so each charter lists its packs, and the Chief of Staff enforces each seat's row in [docs/rules.md](docs/rules.md).
 
 ## By hand
 
