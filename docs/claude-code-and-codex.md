@@ -1,6 +1,6 @@
 # File work
 
-The seats stay in Grok Bot, with the one routine. Claude Code or Codex runs the packet. Consent is in [rules.md](rules.md).
+Grok Bot runs the team: seats, the Content Room, the one routine. The work itself (copy, graphics, code) comes out better from Claude Code or Codex with the skills already in the repo, so the seats hand it over as a packet. Consent is in [rules.md](rules.md).
 
 ## The packet
 
@@ -20,7 +20,8 @@ Example: goal, five X posts about a price change. Inputs, the Product Informatio
 - One git worktree per task, inside tmux.
 - Of the two subscriptions, use the one with more of its weekly allowance left.
 - Content and design run on the owner's Mac. Product and outbound code run on the always-on server over SSH. Logins stay on that server. Do not ask for tokens in chat.
-- The owner can attach to the session.
+- The session is a real terminal. The owner can attach at any point to watch, stop it, or take over and drive it directly.
+- Grok Bot reaches the Mac through local execution. Each command asks the owner for approval until they allow it in settings.
 - Return the path, the branch, or the pull request. Production, a merge, and a deploy wait for a yes on that action.
 - If Claude Code and Codex are both unavailable, the seat does the work itself under the same guardrails.
 

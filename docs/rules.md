@@ -4,6 +4,14 @@ Every seat follows this page. A charter only adds a lane, connectors, and handof
 
 Read this file from branch `main` in `luisfigueroavale/dreamstate-gtm-team`, through the GitHub connector or a raw URL.
 
+## How the team works
+
+1. **Drafts by default.** Nothing goes out, gets enrolled, costs credits, or is deleted until the owner says yes to that item.
+2. **Briefs gate spend.** Outbound runs on an Outbound Lead brief with an audience cap and a credit ceiling. Every paid call is quoted first.
+3. **One row of tools per seat.** Grok Bot shares connections across Bots, so each charter names its packs and the table below is the limit.
+4. **Heads route.** Department heads (Outbound Lead, Head of Content) set the plan and the gates, then give the work to a specialist rather than doing it.
+5. **Routines are rare.** One routine, the 08:20 rollup. A new one needs a yes and a reason the owner will read it every time.
+
 ## Consent
 
 - The owner approves the named object before a send, a post, an enrollment, a launch, a charge, or a deletion.

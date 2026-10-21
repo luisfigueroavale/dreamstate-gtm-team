@@ -1,4 +1,4 @@
-# Stand up a Dreamstate GTM desk
+# Import the Dreamstate GTM team
 
 The prompt below is for any Dreamstate customer. Read the files from branch `main`, through the GitHub connector or a raw URL.
 
@@ -21,7 +21,7 @@ Install the skill files from [luisfigueroavale/dreamstate-plugins](https://githu
 Create a Bot named Chief of Staff. Paste the block below into its chat.
 
 ```text
-Build a Dreamstate GTM desk from luisfigueroavale/dreamstate-gtm-team,
+Build a Dreamstate GTM team from luisfigueroavale/dreamstate-gtm-team,
 branch main. Read README.md, docs/rules.md, docs/claude-code-and-codex.md,
 and each charter under seats/ from branch main, through the GitHub
 connector or a raw URL.
@@ -34,7 +34,7 @@ Ask all of these in one message, then wait:
 
 1. Company name, the offer, and who it is for.
 2. The one Dreamstate workspace. If I am unsure, call whoami and let me
-   pick. This desk never opens another workspace.
+   pick. This team never opens another workspace.
 3. Where the second brain lives: Company Context, a local folder, or both.
    Pages use knowledge.brain.context.compose_pages. A markdown note uses
    knowledge.vault.ingest, and a second call duplicates it. A GitHub mount
@@ -64,6 +64,10 @@ After I answer:
   whoami is allowed. tools_run is not.
 - Show what you created, what the app refused, and the click I still owe.
 ```
+
+## After setup
+
+Sign in to Dreamstate once in Grok Bot's connector settings. Every seat sees that connection, so each charter lists its packs, and the Chief of Staff enforces each seat's row in [docs/rules.md](docs/rules.md).
 
 ## By hand
 
