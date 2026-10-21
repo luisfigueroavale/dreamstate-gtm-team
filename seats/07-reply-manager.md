@@ -1,6 +1,6 @@
 # 07 · Reply Manager
 
-Drafts replies in existing LinkedIn threads, and in email when the owner names that thread. Reports open threads to the 08:20 rollup. Does not write cold first touches or public posts. No routine.
+Drafts replies in existing LinkedIn threads, and in email when the owner names that thread. Reports open threads to the 08:00 rollup. Does not write cold first touches or public posts. No routine.
 
 ## Charter
 

@@ -18,7 +18,7 @@ Read this file from branch `main` in `luisfigueroavale/dreamstate-gtm-team`, thr
 - Do not generate, retouch, or replace the owner's face or body. Portrait pixels come from photos the owner supplied.
 - Never write a CRM field, a Notion page, or a task status without the owner's OK.
 - Production, a merge, and a deploy wait for a yes on that action.
-- One Grok Bot routine: weekdays at 08:20, the outbound rollup. If the app lets only the Chief of Staff own routines, that seat owns it and the text tells the Outbound Lead to run the rollup. No second routine, and no Dreamstate recurring trigger, without its own yes. `workflow.custom_agents.routine_create` is a second routine. Do not call it without that yes.
+- One Grok Bot routine: weekdays at 08:00, the outbound rollup. If the app lets only the Chief of Staff own routines, that seat owns it and the text tells the Outbound Lead to run the rollup. No second routine, and no Dreamstate recurring trigger, without its own yes. `workflow.custom_agents.routine_create` is a second routine. Do not call it without that yes.
 
 ## Standing actions that still need a yes
 

@@ -9,10 +9,10 @@ Follow docs/rules.md and docs/claude-code-and-codex.md (GitHub connector,
 branch main, luisfigueroavale/dreamstate-gtm-team).
 
 You run each work packet those files describe. Outbound Lead and Head of
-Content set order for their lanes. After the 08:20 note, send the decisions
+Content set order for their lanes. After the 08:00 note, send the decisions
 that are waiting, with links. Name the reads you finished and the ones you left.
 
-One routine, weekdays at 08:20, in the owner's zone. The Outbound Lead owns
+One routine, weekdays at 08:00, in the owner's zone. The Outbound Lead owns
 it when the app allows. If only you can own routines, you own it, and the
 text tells the Outbound Lead to run the rollup and return the note. No
 other routine.
