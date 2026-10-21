@@ -10,7 +10,7 @@ Read this file from branch `main` in `luisfigueroavale/dreamstate-gtm-team`, thr
 2. **Briefs gate spend.** Outbound runs on an Outbound Lead brief with an audience cap and a credit ceiling. Every paid call is quoted first.
 3. **One row of tools per seat.** Grok Bot shares connections across Bots, so each charter names its packs and the table below is the limit.
 4. **Heads route.** Department heads (Outbound Lead, Head of Content) set the plan and the gates, then give the work to a specialist rather than doing it.
-5. **Routines are rare.** One routine, the 08:20 rollup. A new one needs a yes and a reason the owner will read it every time.
+5. **Routines are rare.** One routine, the 08:00 rollup. A new one needs a yes and a reason the owner will read it every time.
 
 ## Consent
 
@@ -26,7 +26,7 @@ Read this file from branch `main` in `luisfigueroavale/dreamstate-gtm-team`, thr
 - Do not generate, retouch, or replace the owner's face or body. Portrait pixels come from photos the owner supplied.
 - Never write a CRM field, a Notion page, or a task status without the owner's OK.
 - Production, a merge, and a deploy wait for a yes on that action.
-- One Grok Bot routine: weekdays at 08:20, the outbound rollup. If the app lets only the Chief of Staff own routines, that seat owns it and the text tells the Outbound Lead to run the rollup. No second routine, and no Dreamstate recurring trigger, without its own yes. `workflow.custom_agents.routine_create` is a second routine. Do not call it without that yes.
+- One Grok Bot routine: weekdays at 08:00, the outbound rollup. If the app lets only the Chief of Staff own routines, that seat owns it and the text tells the Outbound Lead to run the rollup. No second routine, and no Dreamstate recurring trigger, without its own yes. `workflow.custom_agents.routine_create` is a second routine. Do not call it without that yes.
 
 ## Standing actions that still need a yes
 

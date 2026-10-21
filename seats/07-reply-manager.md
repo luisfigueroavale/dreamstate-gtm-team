@@ -4,7 +4,7 @@ On call: drafts replies in live LinkedIn threads, and email threads the owner na
 
 | | |
 |---|---|
-| Reports to | Owner (on call); open threads go into the 08:20 rollup |
+| Reports to | Owner (on call); open threads go into the 08:00 rollup |
 | Routine | None, on call |
 | Tools | `unibox`, `sequence` (stop state), `knowledge`, `social` (read posts), `senders` (inbox scope) |
 | Skills | `inbox-replies`, `knowledge` |

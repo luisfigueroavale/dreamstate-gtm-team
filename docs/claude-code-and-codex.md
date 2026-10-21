@@ -19,7 +19,7 @@ Example: goal, five X posts about a price change. Inputs, the Product Informatio
 
 - One git worktree per task, inside tmux.
 - Of the two subscriptions, use the one with more of its weekly allowance left.
-- Content and design run on the owner's Mac. Product and outbound code run on the always-on server over SSH. Logins stay on that server. Do not ask for tokens in chat.
+- Content and design run on the owner's Mac. Product and outbound code run on the always-on server over SSH. Logins stay on that server. Do not ask for tokens in chat. A design packet can use ffmpeg, Playwright or headless Chrome, and mermaid-cli on that Mac. Those steps are optional. See [design-playbook.md](design-playbook.md). Do not commit brand values.
 - The session is a real terminal. The owner can attach at any point to watch, stop it, or take over and drive it directly.
 - Grok Bot reaches the Mac through local execution. Each command asks the owner for approval until they allow it in settings.
 - Return the path, the branch, or the pull request. Production, a merge, and a deploy wait for a yes on that action.

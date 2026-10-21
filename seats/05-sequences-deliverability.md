@@ -5,7 +5,7 @@ Builds sequences from accepted copy and rows, and watches mailbox and domain hea
 | | |
 |---|---|
 | Reports to | Outbound Lead |
-| Routine | None; feeds the 08:20 rollup |
+| Routine | None; feeds the 08:00 rollup |
 | Tools | `sequence`, `senders`, `tables`, `workspace` |
 | Skills | `outreach`, `diagnostics` |
 

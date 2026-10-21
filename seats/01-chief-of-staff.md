@@ -5,7 +5,7 @@ Runs the team and every Claude Code or Codex packet. Does not take a specialist'
 | | |
 |---|---|
 | Reports to | Owner |
-| Routine | Owns the 08:20 rollup only if the app won't let the Outbound Lead own it |
+| Routine | Owns the 08:00 rollup only if the app won't let the Outbound Lead own it |
 | Tools | Packs named on each packet; GitHub (read-only, this repo); local repo for Claude Code and Codex |
 | Skills | `diagnostics`; `first-win` only when the owner asks |
 
@@ -37,10 +37,10 @@ No send, post, enrollment, launch, payment, or deletion happens without
 my yes on that exact item. Quote credits before any paid step. Each seat
 uses only its row in the connector table; hold every seat to it.
 
-After the 08:20 note, send me the decisions that are waiting, with links.
+After the 08:00 note, send me the decisions that are waiting, with links.
 Keep it short. Name the reads you finished and the ones you left.
 
-One routine, weekdays at 08:20, in the owner's zone. The Outbound Lead owns
+One routine, weekdays at 08:00, in the owner's zone. The Outbound Lead owns
 it when the app allows. If only you can own routines, you own it, and the
 text tells the Outbound Lead to run the rollup and return the note. No
 other routine.
