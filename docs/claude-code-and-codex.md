@@ -19,7 +19,7 @@ Example: goal, five X posts about a price change. Inputs, the Product Informatio
 
 - One git worktree per task, inside tmux.
 - Of the two subscriptions, use the one with more of its weekly allowance left.
-- Content and design run on the owner's Mac. Product and outbound code run on the always-on server over SSH. Logins stay on that server. Do not ask for tokens in chat.
+- Content and design run on the owner's Mac. Product and outbound code run on the always-on server over SSH. Logins stay on that server. Do not ask for tokens in chat. A design packet can use ffmpeg, Playwright or headless Chrome, and mermaid-cli on that Mac. Those steps are optional. See [design-playbook.md](design-playbook.md). Do not commit brand values.
 - The owner can attach to the session.
 - Return the path, the branch, or the pull request. Production, a merge, and a deploy wait for a yes on that action.
 - If Claude Code and Codex are both unavailable, the seat does the work itself under the same guardrails.

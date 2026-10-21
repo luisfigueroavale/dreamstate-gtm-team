@@ -64,7 +64,7 @@ The YouTube Writer packages a video: title options, a thumbnail brief, a descrip
 
 ### Graphic Designer
 
-The Graphic Designer builds social graphics, thumbnail frames, carousels, and diagrams. Dreamstate stores the editable source as HTML, CSS, or SVG, renders a PNG or PDF, and can read that source back. Diagrams stay on your machine. The files do not name the local diagram tool. That is an open item. It reads Tone of Voice, when that page exists, and your thumbnail preferences before it draws. It reviews the render at export size and again at phone width. It attaches the PNG to a social draft. That attach can clear an earlier approval, so it asks again before any schedule. It hands the Chief of Staff the brief, the photo files, the skill, and the guardrails. It delivers the editable source and the PNG or PDF. Portrait pixels come only from photos you supplied. It never generates, retouches, or replaces your face or body. No metric on an image unless it can name the source. It never writes the caption that ships. It has no routine of its own. Full charter: [seats/13-graphic-designer.md](../seats/13-graphic-designer.md).
+The Graphic Designer builds social graphics, thumbnail frames, carousels, and diagrams. A GIF or MP4 is optional, and only from a still you already accepted. The steps are in [docs/design-playbook.md](design-playbook.md). They are optional. You use your own style. Dreamstate stores the editable source as HTML, CSS, or SVG, renders a PNG or PDF, and can read that source back. The shared form at `design/brand.md` is blank on purpose. You fill your own copy at `design/brand.local.md`, or under `work/`. Those paths are gitignored. Do not put your colors in the shared file, and do not paste Company Context into it. Diagrams stay on your machine. If you want Mermaid, mermaid-cli can render the SVG locally. It reads Tone of Voice, when that page exists, and your thumbnail preferences before it draws. It does not copy those pages into a committed file. It reviews the render at export size and again at phone width. It attaches the PNG, or the GIF or MP4 when one was made. That attach can clear an earlier approval, so it asks again before any schedule. It hands the Chief of Staff the brief, the photo files, the skill, the guardrails, and the GIF or MP4 when one was made. It delivers the editable source, the PNG or PDF, and the GIF or MP4 when one was made. Portrait pixels come only from photos you supplied. It never generates, retouches, or replaces your face or body. No metric on an image unless it can name the source. Google Drive is read-only. It never writes the caption that ships. It has no routine of its own. Full charter: [seats/13-graphic-designer.md](../seats/13-graphic-designer.md).
 
 ### Content Room
 
@@ -165,11 +165,12 @@ If the seats do not exist yet, run [setup-prompt.md](../setup-prompt.md) first. 
 2. Tell the desk the company name, the offer, and who it is for. Then write the four Company Context pages if they are missing: Product Information, Ideal Customer, Competitor Analysis, and Tone of Voice. Say what belongs on each page before anyone writes it. A page is written with `knowledge.brain.context.compose_pages`. That call starts as a dry run, which shows the price and writes nothing. Then you say yes. A markdown note uses `knowledge.vault.ingest`, and a second call duplicates the note, so do not ingest the same note twice.
 3. Confirm the one Dreamstate connection, `https://mcp.trydreamstate.com/mcp`, and sign in through the browser. If a second server exists at `https://mcp.trydreamstate.com`, remove it. Do not paste an API key.
 4. Name the local repo path for Claude Code or Codex. Say whether it is on this machine or over SSH, and which agent to prefer. Install the plugin skill files into that checkout. Do not add a second Dreamstate server while you do that.
-5. Set the time zone for the one weekday routine at 08:00. Confirm there is no second routine. If the app put that routine on the Chief of Staff, the routine text must tell the Outbound Lead to run the rollup and return the note.
-6. Connect the senders and mailboxes you want. Starting a sender connection needs a yes. Turning on mailbox warmup needs a yes. Auto-enrolling a mailbox for deliverability needs a yes. Buying a mailbox is a charge: you get a quote, then you decide. A placement test sends a real probe email and needs a yes even when the credit price is 0. This repo does not say which mailbox vendor to use or how many mailboxes to connect. That is an open item.
-7. Approve the first outbound brief before any paid lookup. Then approve the first lead list and its credit quote. Do not enroll yet. The lead section below is the full path.
-8. Tell the Head of Content which channels you want this week, and whether you will read a trend brief each weekday morning. If you do not say you will read it, the brief stays off.
-9. Read the drafts. Say yes only to the named send, post, enrollment, or launch. A yes on different wording is a new yes.
+5. If you want shared design values, copy the blank form at `design/brand.md` to `design/brand.local.md` in that checkout, or put the copy under `work/`. Fill the copy yourself. Leave a line blank when you do not know the value. Do not invent a color, and do not commit the copy. The templates under `design/templates/` are optional. The steps are in [docs/design-playbook.md](design-playbook.md). If you want diagrams or motion, the Mac needs ffmpeg, Playwright or headless Chrome, and mermaid-cli.
+6. Set the time zone for the one weekday routine at 08:00. Confirm there is no second routine. If the app put that routine on the Chief of Staff, the routine text must tell the Outbound Lead to run the rollup and return the note.
+7. Connect the senders and mailboxes you want. Starting a sender connection needs a yes. Turning on mailbox warmup needs a yes. Auto-enrolling a mailbox for deliverability needs a yes. Buying a mailbox is a charge: you get a quote, then you decide. A placement test sends a real probe email and needs a yes even when the credit price is 0. This repo does not say which mailbox vendor to use or how many mailboxes to connect. That is an open item.
+8. Approve the first outbound brief before any paid lookup. Then approve the first lead list and its credit quote. Do not enroll yet. The lead section below is the full path.
+9. Tell the Head of Content which channels you want this week, and whether you will read a trend brief each weekday morning. If you do not say you will read it, the brief stays off.
+10. Read the drafts. Say yes only to the named send, post, enrollment, or launch. A yes on different wording is a new yes.
 
 The Head of Content starts from Product Information, Ideal Customer, and Tone of Voice. Its charter does not mention mailboxes. Creating a sequence is a free draft. Before a launch, the seat still shows the sender, the audience count, and the pace, and the launch needs its own yes.
 
@@ -200,7 +201,7 @@ How a yes moves:
 - Bots never call the tool that authorizes a publish, and they never turn on auto-publish.
 - If the text, the media, or the schedule changes after a yes, they ask again.
 - When you pick or cut a post, the Head of Content records that with the post feedback tool or the version feedback tool. The X Writer does not keep a separate local log for picks and cuts.
-- If the Graphic Designer attaches a new PNG, an earlier approval can clear. They ask again before any schedule.
+- If the Graphic Designer attaches a new PNG, GIF, or MP4, an earlier approval can clear. They ask again before any schedule.
 
 ## How to set up the writing style
 
@@ -284,6 +285,7 @@ The files do not decide these. Do not treat a guess as a rule.
 - A page titled "content plan." The plan is the marked days plus the Content Room pointers.
 - Which mailbox vendor to use, and how many mailboxes to connect.
 - The worksheet columns. Copy uses columns that already exist.
-- A local tool name for YouTube connect and upload, and a local tool name for diagrams.
+- A local tool name for YouTube connect and upload. Diagrams can use mermaid-cli on your Mac. That path is optional.
+- Your brand values. The shared form stays blank. You fill `design/brand.local.md` or a file under `work/`. Phone width in pixels is not set. GIF duration, frame rate, and file size in the playbook are marked to-check. They are not LinkedIn limits.
 - An automatic write-back of your edits onto Tone of Voice. Only the Reply Manager is told to save edited reply text, and only after you approve that write.
 - A morning rollup for content, or for Deal Reactivation. The 08:00 note asks five outbound seats. The weekday trend brief stays off unless you say you will read it.

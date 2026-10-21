@@ -1,0 +1,22 @@
+/*
+  Names the optional HTML templates can read.
+  This file sets no values. Do not add your company's colors, fonts,
+  or sizes here.
+
+  Put values in design/tokens.local.css (gitignored). Use any of these
+  names you want. Skip a name you do not use.
+
+  --color-bg
+  --color-fg
+  --color-accent
+  --color-muted
+  --font-sans
+  --size-title
+  --size-body
+  --size-kicker
+  --space-safe
+  --space-block
+  --logo-max-height
+
+  See design/brand.md for the blank form and the local-copy instructions.
+*/

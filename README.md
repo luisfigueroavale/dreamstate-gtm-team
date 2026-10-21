@@ -50,12 +50,12 @@ Outbound reports to the Outbound Lead. Content reports to the Head of Content. B
 - [LinkedIn Writer](seats/10-linkedin-writer.md) drafts LinkedIn posts, opening lines, and articles.
 - [X Writer](seats/11-x-writer.md) drafts X posts, threads, and replies. The live account stays quiet until you name one action.
 - [YouTube Writer](seats/12-youtube-writer.md) packages a video: title options, a thumbnail brief, a description, and chapters. It does not upload.
-- [Graphic Designer](seats/13-graphic-designer.md) builds graphics, thumbnail frames, carousels, and diagrams. It does not write the caption that ships.
+- [Graphic Designer](seats/13-graphic-designer.md) builds graphics, thumbnail frames, carousels, and diagrams. A GIF or MP4 is optional. It does not write the caption that ships. The optional steps are in [docs/design-playbook.md](docs/design-playbook.md).
 - [Content Room](seats/14-content-room.md) is the content group chat. It holds pointers (channel, angle, file, deadline), not the draft. It does not publish.
 
 Packs for each seat are in the rules guide.
 
-YouTube drafts use `social.content.artifact_create` and stay drafts until one is connected. Connect and upload stay local. Graphics: Dreamstate stores HTML, CSS, or SVG, renders PNG or PDF, and reads sources back with `social.visuals.source_get` and `social.visuals.source_list`. Diagrams stay local.
+YouTube drafts use `social.content.artifact_create` and stay drafts until one is connected. Connect and upload stay local. Graphics: Dreamstate stores HTML, CSS, or SVG, renders PNG or PDF, and reads sources back with `social.visuals.source_get` and `social.visuals.source_list`. Diagrams stay local. The shared brand form at `design/brand.md` is blank. Each team fills a local copy. See [docs/design-playbook.md](docs/design-playbook.md).
 
 ## Routine
 

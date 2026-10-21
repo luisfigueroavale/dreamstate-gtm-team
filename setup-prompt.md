@@ -145,6 +145,16 @@ After I answer:
   Lead to run the rollup and return the note. No other routine.
 - Install the plugin skills into the coding checkout if they are not
   there yet. Do not add a second MCP server while you do that.
+- Design setup. Keep design/brand.md as the blank form. Do not write
+  company colors, fonts, logo rules, or Company Context into that file
+  or into any committed file. Copy the blank form to
+  design/brand.local.md in the coding checkout, or under work/, and
+  leave every field blank for me to fill. Those paths are in
+  .gitignore. The HTML files under design/templates/ are optional
+  starters. I use my own style. Nothing in docs/design-playbook.md is
+  forced. If I want diagrams or GIFs, say that the Mac needs ffmpeg,
+  Playwright or headless Chrome, and mermaid-cli. Do not post or
+  schedule.
 - Do not connect a new app, send, post, enroll, launch, spend, or delete.
   whoami is allowed. tools_run is not.
 - Final report, in plain words. Do not only list names. For each thing
@@ -183,11 +193,14 @@ After I answer:
     of Voice), connecting senders and mailboxes (each needs my yes), and
     the first lead list. Also cover how to set up the content plan, the
     writing style, and leads, as docs/start-here.md describes them.
-    Only include steps the files support.
+    Include the design form: design/brand.md stays blank, and I fill
+    design/brand.local.md or a file under work/ myself. Do not pull
+    Company Context into a committed file. Only include steps the files
+    support.
 ```
 
 ## By hand
 
 Create the Chief of Staff and paste its charter. Add other seats when you need them. Then the Content Room and the single routine at 08:00 on weekdays, using the same ownership fallback as the prompt.
 
-When you finish, give the owner the same map as [docs/start-here.md](docs/start-here.md), in plain words, with the names and ids you created. Point them at that file. Cover who does what, who they talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. If a file does not define a step, call it an open item.
+When you finish, give the owner the same map as [docs/start-here.md](docs/start-here.md), in plain words, with the names and ids you created. Point them at that file. Cover who does what, who they talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. For design, leave [design/brand.md](design/brand.md) blank and tell the owner to fill `design/brand.local.md` or a file under `work/`. Point them at [docs/design-playbook.md](docs/design-playbook.md). The steps there are optional. If a file does not define a step, call it an open item.
