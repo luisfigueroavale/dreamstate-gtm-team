@@ -1,6 +1,6 @@
 # Stand up a Dreamstate GTM desk
 
-The prompt below is for any Dreamstate customer. Read the files from branch `main`, through the GitHub connector or a raw URL.
+The prompt below is for any Dreamstate customer. Read the files from branch `main`, through the GitHub connector or a raw URL. At the end, setup gives the owner the map in [docs/start-here.md](docs/start-here.md), in plain words, using the names and ids it created.
 
 ## Connect once
 
@@ -20,13 +20,13 @@ Install the skill files from [luisfigueroavale/dreamstate-plugins](https://githu
 
 Create a Bot named Chief of Staff. Paste the block below into its chat.
 
-The block tells that Bot to explain the desk in plain language before the six questions. The explanation covers the team, each seat, Dreamstate and the one server, Company Context, Claude Code or Codex and the plugin skill files, and the 08:00 rollup. Each question says why it is asked. The final report says what each created item does, what the app refused, and what you still need to do. The consent rules stay as written in [docs/rules.md](docs/rules.md).
+The block tells that Bot to explain the desk in plain language before the six questions. The explanation covers the team, each seat, Dreamstate and the one server, Company Context, Claude Code or Codex and the plugin skill files, and the 08:00 rollup. Each question says why it is asked. The final report says what each created item does, what the app refused, and what you still need to do. It then gives the same map as [docs/start-here.md](docs/start-here.md), filled in with the names and ids it created, and points at that file. The map covers who does what, who you talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. The consent rules stay as written in [docs/rules.md](docs/rules.md).
 
 ```text
 Build a Dreamstate GTM desk from luisfigueroavale/dreamstate-gtm-team,
 branch main. Read README.md, docs/rules.md, docs/claude-code-and-codex.md,
-and each charter under seats/ from branch main, through the GitHub
-connector or a raw URL.
+docs/start-here.md, and each charter under seats/ from branch main,
+through the GitHub connector or a raw URL.
 
 Dreamstate MCP: https://mcp.trydreamstate.com/mcp. Browser sign-in. No API
 key. One server. If a second server exists at https://mcp.trydreamstate.com,
@@ -148,11 +148,46 @@ After I answer:
 - Do not connect a new app, send, post, enroll, launch, spend, or delete.
   whoami is allowed. tools_run is not.
 - Final report, in plain words. Do not only list names. For each thing
-  you created, say what it is and what it does. Say what the app refused,
-  and the click I still owe. If you use a term, add one line that says
-  what it means.
+  you created, say what it is and what it does. Use the name and the id
+  you created. Say what the app refused, and the click I still owe. If
+  you use a term, add one line that says what it means. This report does
+  not change the consent rules in docs/rules.md.
+
+  Then give me the same map as docs/start-here.md, in plain words, filled
+  in with those names and ids. Point me at docs/start-here.md. Read that
+  file before you write the map. If a file does not say where something
+  lives or who owns it, say it is an open item. Do not invent a seat, a
+  tool, or a flow.
+
+  The map has four parts:
+
+  - Who does what. One short line per seat you created, plus the Content
+    Room if you created it. Say what it does, what it hands off, and what
+    it never does.
+  - Who I talk to. I talk mainly to the Chief of Staff. I go to the
+    Outbound Lead for outbound and the Head of Content for content. I
+    call the Reply Manager when a thread is waiting, and Deal
+    Reactivation when I want a quiet deal looked at. Use the reporting
+    line in each charter. If a charter names no boss, say that.
+  - Who talks to who. The reporting lines, the Content Room, and the
+    weekday 08:00 rollup. If you own the routine, your text tells the
+    Outbound Lead to run the rollup and return the note. The Outbound
+    Lead collects from the five seats its charter names. You then send
+    me the decisions that are waiting, with links. Also say how a packet
+    reaches Claude Code or Codex. A packet is four fields: the goal, the
+    inputs, the skill, and the guardrails. You run them as one task in
+    the local repo path I gave you. This repo does not name that folder.
+    Use the path I gave. Do not assume ~/dreamstate-growth.
+  - The first-week checklist. Cover the four Company Context pages
+    (Product Information, Ideal Customer, Competitor Analysis, and Tone
+    of Voice), connecting senders and mailboxes (each needs my yes), and
+    the first lead list. Also cover how to set up the content plan, the
+    writing style, and leads, as docs/start-here.md describes them.
+    Only include steps the files support.
 ```
 
 ## By hand
 
 Create the Chief of Staff and paste its charter. Add other seats when you need them. Then the Content Room and the single routine at 08:00 on weekdays, using the same ownership fallback as the prompt.
+
+When you finish, give the owner the same map as [docs/start-here.md](docs/start-here.md), in plain words, with the names and ids you created. Point them at that file. Cover who does what, who they talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. If a file does not define a step, call it an open item.

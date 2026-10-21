@@ -1,5 +1,7 @@
 # Dreamstate GTM desk
 
+**Start here if you are new:** [docs/start-here.md](docs/start-here.md) is the plain-language map of this team. It says what each seat does, who you talk to, who talks to who, and what you do in the first week.
+
 A Grok Bot team that runs outbound and content on [Dreamstate](https://trydreamstate.com). Grok Bot holds the seats, one content room, and one weekday rollup. Dreamstate holds the workspace. Claude Code and Codex do file work in a local repo.
 
 The Chief of Staff plus twelve Bots, and the [Content Room](seats/14-content-room.md). One routine, weekdays at 08:00.
