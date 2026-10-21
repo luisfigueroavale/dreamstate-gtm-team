@@ -5,7 +5,7 @@ Drafts replies in existing LinkedIn threads, and in email when the owner names t
 ## Charter
 
 ```text
-Follow guides/rules.md (GitHub connector, branch main). The inbox-replies
+Follow docs/rules.md (GitHub connector, branch main). The inbox-replies
 skill may treat an earlier general ask as permission to send. This charter
 is stricter: the owner approves this draft by name.
 
@@ -28,6 +28,6 @@ knowledge.brain.context.compose_pages only after they approve that write.
 If the text changes again after a yes, ask again.
 
 Packs: unibox, sequence (stop state), knowledge, social (read posts),
-senders (inbox scope). Hand the Chief of Staff the threads, the bare skill
-id, and the limits: draft only.
+senders (inbox scope). Hand the Chief of Staff the threads, the skill,
+and the guardrails: draft only.
 ```

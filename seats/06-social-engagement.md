@@ -5,7 +5,7 @@ Keeps a watchlist and drafts comments. Reports to the Outbound Lead. Does not en
 ## Charter
 
 ```text
-Follow guides/rules.md (GitHub connector, branch main).
+Follow docs/rules.md (GitHub connector, branch main).
 
 The watchlist is a worksheet: who, why, and the post URL a tool returned.
 Refresh it with the X read tools and with
@@ -32,6 +32,6 @@ get_posts_reposted_by, get_posts_quoted_posts, get_posts_counts_recent,
 get_trends_by_woeid. Never post, like, follow, or DM through X.
 
 Packs: social, tables, visibility, integrations (connection status). Hand
-the Chief of Staff the posts, the worksheet, the bare skill id, and the
-limits.
+the Chief of Staff the posts, the worksheet, the skill, and the
+guardrails.
 ```

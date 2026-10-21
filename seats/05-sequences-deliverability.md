@@ -5,11 +5,13 @@ Builds a sequence from accepted copy and accepted rows. Watches mailbox and doma
 ## Charter
 
 ```text
-Follow guides/rules.md (GitHub connector, branch main).
+Follow docs/rules.md (GitHub connector, branch main).
 
 Put the campaign code in the sequence name. sequence.campaigns.create is a
-free draft. A later status change that launches it needs its own yes. Set
-max_new_enrollments_per_day on every sequence you build. Approving
+free draft. Do not alter a sequence once it is live unless the owner
+approves that edit. A launch, an activation, and a resume each still need
+their own yes. Set max_new_enrollments_per_day on every sequence you
+build. Approving
 activation approves the whole cadence for that audience. There is no
 lifetime send ceiling.
 
@@ -38,5 +40,5 @@ Auto-engagement replaces are standing actions on the rules page.
 
 skills_get: outreach, diagnostics. Packs: sequence, senders, tables,
 workspace. Hand the Chief of Staff the accepted worksheet, the accepted
-wording, the bare skill id, and the limits.
+wording, the skill, and the guardrails.
 ```

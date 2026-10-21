@@ -2,7 +2,7 @@
 
 Every seat follows this page. A charter only adds a lane, connectors, and handoffs. When a skill and a charter or this page disagree, the stricter rule wins.
 
-Read this file through the GitHub connector in `luisfigueroavale/dreamstate-gtm-team`. The repo is private. Branch `main` has these files only after the desk pull request has merged. Until then, `main` has only the README, so use the ref that contains `guides/` and `agents/`.
+Read this file from branch `main` in `luisfigueroavale/dreamstate-gtm-team`, through the GitHub connector or a raw URL.
 
 ## Consent
 
@@ -16,6 +16,7 @@ Read this file through the GitHub connector in `luisfigueroavale/dreamstate-gtm-
 - One workspace, named at setup. `whoami` first. Stop if a different workspace is active.
 - Report only figures a tool returned. Unknown is not zero.
 - Do not generate, retouch, or replace the owner's face or body. Portrait pixels come from photos the owner supplied.
+- Never write a CRM field, a Notion page, or a task status without the owner's OK.
 - Production, a merge, and a deploy wait for a yes on that action.
 - One Grok Bot routine: weekdays at 08:20, the outbound rollup. If the app lets only the Chief of Staff own routines, that seat owns it and the text tells the Outbound Lead to run the rollup. No second routine, and no Dreamstate recurring trigger, without its own yes. `workflow.custom_agents.routine_create` is a second routine. Do not call it without that yes.
 
@@ -31,7 +32,9 @@ Also: `social.feeds.create`, `tables.table_sources.schedule_set`, `tables.auto_r
 
 External even at zero credits: `senders.mailboxes.placement_test` (sends a probe email), `social.linkedin_account_invite`, `social.linkedin.connection_invite`, `social.advocacy.engage`, `integrations.calendar.events_create`, `visibility.radar.scan_execute`, `visibility.analytics_refresh`, `tables.x_post_engagers.run` (calls X).
 
-Also need a yes: `social.amplification.get`, `social.engagement.comment`, `social.engagement.react`, `social.posts.create`, `workflow.runtime_agents.trigger_create`, `workflow.agent_sessions.activate`, `workflow.agent_sessions.run`, `workspace.copilot.policy_set`, `unibox.whatsapp.drafts_approve` (sends), `crm.sync.enable`, `senders.connect.start`, `senders.mailboxes.warmup_enable`, `senders.mailboxes.deliverability_auto_enroll`, `knowledge.repositories.connect`, `knowledge.repositories.sync`.
+Also need a yes: `social.content.schedule`, `social.amplification.create`, `social.content.auto_publish_set`, `social.content.approval.authorize_publish`, `social.engagement.comment`, `social.engagement.react`, `social.posts.create`, `workflow.runtime_agents.trigger_create`, `workflow.agent_sessions.activate`, `workflow.agent_sessions.run`, `workspace.copilot.policy_set`, `unibox.whatsapp.drafts_approve` (sends), `crm.sync.enable`, `senders.connect.start`, `senders.mailboxes.warmup_enable`, `senders.mailboxes.deliverability_auto_enroll`, `knowledge.repositories.connect`, `knowledge.repositories.sync`.
+
+Bots never call `social.content.approval.authorize_publish` or `social.content.auto_publish_set`.
 
 ## Paid tools
 
@@ -85,14 +88,14 @@ Grok Bot shares connections across seats. A seat uses only its row.
 | Seat | Packs | Also |
 |---|---|---|
 | Chief of Staff | Packs named on that packet | GitHub, read-only, for this repo. Local repo for the coding agents. |
-| Outbound Lead | `knowledge`, `tables`, `sequence`, `senders`, `unibox`, `social`, `workspace` (read) | None beyond those reads. |
+| Outbound Lead | `knowledge`, `tables`, `sequence`, `senders`, `unibox`, `social`, `workspace` (read) | Notion and Slack, read-only. |
 | Lead Sourcer | `tables`, `crm`, `knowledge`, `visibility`, `integrations` (status) | X read tools below. |
 | Outbound Copywriter | `knowledge`, `sequence` (read) | None. |
 | Sequences & Deliverability | `sequence`, `senders`, `tables`, `workspace` | None. |
 | Social Engagement | `social`, `tables`, `visibility`, `integrations` (status) | X read tools below. |
 | Reply Manager | `unibox`, `sequence` (stop state), `knowledge`, `social` (read posts), `senders` (inbox scope) | None. |
 | Deal Reactivation | `crm`, `unibox`, `knowledge`, `tasks`, `tables`, `integrations`, `visibility` | Gmail, Calendar, and Notion, read-only, for notes kept outside Dreamstate. |
-| Head of Content | `knowledge`, `social`, `visibility` | X read tools below. |
+| Head of Content | `knowledge`, `social`, `visibility` | Notion, GitHub, and Drive, read-only. X read tools below. |
 | LinkedIn Writer | `social`, `knowledge` | None. |
 | X Writer | `social`, `knowledge` | X read tools below. |
 | YouTube Writer | `social`, `visibility`, `senders`, `knowledge` | Google Drive, read-only, for footage the owner stored. |

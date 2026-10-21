@@ -2,9 +2,9 @@
 
 A Grok Bot team that runs outbound and content on [Dreamstate](https://trydreamstate.com). Grok Bot holds the seats, one content room, and one weekday rollup. Dreamstate holds the workspace. Claude Code and Codex do file work in a local repo.
 
-Twelve Bots. One [Content Room](agents/14-content-room.md). One routine, weekdays at 08:20.
+The Chief of Staff plus twelve Bots, and the [Content Room](seats/14-content-room.md). One routine, weekdays at 08:20.
 
-Shared consent, standing actions, and the connector table are in [guides/rules.md](guides/rules.md). How file work runs is in [guides/claude-code-and-codex.md](guides/claude-code-and-codex.md).
+Shared consent, standing actions, and the connector table are in [docs/rules.md](docs/rules.md). How file work runs is in [docs/claude-code-and-codex.md](docs/claude-code-and-codex.md).
 
 ## Connect once
 
@@ -22,13 +22,13 @@ Skill files for the coding agent come from [luisfigueroavale/dreamstate-plugins]
 
 ## Seats
 
-Outbound, through the [Outbound Lead](agents/02-outbound-lead.md): [Lead Sourcer](agents/03-lead-sourcer.md), [Outbound Copywriter](agents/04-outbound-copywriter.md), [Sequences & Deliverability](agents/05-sequences-deliverability.md), [Social Engagement](agents/06-social-engagement.md), [Reply Manager](agents/07-reply-manager.md), [Deal Reactivation](agents/08-deal-reactivation.md).
+Outbound, through the [Outbound Lead](seats/02-outbound-lead.md): [Lead Sourcer](seats/03-lead-sourcer.md), [Outbound Copywriter](seats/04-outbound-copywriter.md), [Sequences & Deliverability](seats/05-sequences-deliverability.md), [Social Engagement](seats/06-social-engagement.md), [Reply Manager](seats/07-reply-manager.md), [Deal Reactivation](seats/08-deal-reactivation.md).
 
-Content, through the [Head of Content](agents/09-head-of-content.md): [LinkedIn Writer](agents/10-linkedin-writer.md), [X Writer](agents/11-x-writer.md), [YouTube Writer](agents/12-youtube-writer.md), [Graphic Designer](agents/13-graphic-designer.md).
+Content, through the [Head of Content](seats/09-head-of-content.md): [LinkedIn Writer](seats/10-linkedin-writer.md), [X Writer](seats/11-x-writer.md), [YouTube Writer](seats/12-youtube-writer.md), [Graphic Designer](seats/13-graphic-designer.md).
 
-The [Chief of Staff](agents/01-chief-of-staff.md) runs the handoff. Packs for each seat are in the rules guide.
+The [Chief of Staff](seats/01-chief-of-staff.md) runs the handoff. Packs for each seat are in the rules guide.
 
-YouTube drafts use `social.content.artifact_create` and stay drafts until a YouTube account is connected. Connect and upload stay local. Graphics: Dreamstate stores HTML, CSS, or SVG, renders PNG or PDF, and reads sources back with `social.visuals.source_get` and `social.visuals.source_list`. Diagrams stay local.
+YouTube drafts use `social.content.artifact_create` and stay drafts until one is connected. Connect and upload stay local. Graphics: Dreamstate stores HTML, CSS, or SVG, renders PNG or PDF, and reads sources back with `social.visuals.source_get` and `social.visuals.source_list`. Diagrams stay local.
 
 ## Routine
 

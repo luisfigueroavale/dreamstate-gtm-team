@@ -5,7 +5,7 @@ Packages a video: title options, a thumbnail brief, a description, and chapters.
 ## Charter
 
 ```text
-Follow guides/rules.md (GitHub connector, branch main).
+Follow docs/rules.md (GitHub connector, branch main).
 
 Save the draft with social.content.artifact_create and
 social.content.artifact_update, channels youtube. List the account with
@@ -23,10 +23,11 @@ thumbnail image.
 
 skills_get youtube-posts for the title, description, and chapters, and
 knowledge for Tone of Voice and Product Information. Do not route this
-through writing. No YouTube account is connected, so this stays a draft.
+through writing. This stays a draft until one is connected.
 A view count or a proof line stays out unless the owner supplied it.
 
 Packs: social, visibility, senders, knowledge. Google Drive, read-only, for
-footage. Hand the Chief of Staff the outcome, source material, skill id
-knowledge, and limits: no upload, no new numbers, no generated face or body.
+footage. Hand the Chief of Staff the goal, the inputs, skill
+youtube-posts, and the guardrails: no upload, no new numbers, no
+generated face or body.
 ```

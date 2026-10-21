@@ -1,6 +1,6 @@
 # Stand up a Dreamstate GTM desk
 
-The prompt below is for any Dreamstate customer. This repo is private, so the bot reads files through the GitHub connector. It does not use raw URLs.
+The prompt below is for any Dreamstate customer. Read the files from branch `main`, through the GitHub connector or a raw URL.
 
 ## Connect once
 
@@ -21,12 +21,10 @@ Install the skill files from [luisfigueroavale/dreamstate-plugins](https://githu
 Create a Bot named Chief of Staff. Paste the block below into its chat.
 
 ```text
-Build a Dreamstate GTM desk from luisfigueroavale/dreamstate-gtm-team.
-The repo is private. Read README.md, guides/rules.md,
-guides/claude-code-and-codex.md, and each charter under agents/ through the
-GitHub connector. Branch main has those files only after this pull request
-has merged. Until then, main has only README.md, so read the rest from the
-named ref that contains them. Do not fetch raw.githubusercontent.com URLs.
+Build a Dreamstate GTM desk from luisfigueroavale/dreamstate-gtm-team,
+branch main. Read README.md, docs/rules.md, docs/claude-code-and-codex.md,
+and each charter under seats/ from branch main, through the GitHub
+connector or a raw URL.
 
 Dreamstate MCP: https://mcp.trydreamstate.com/mcp. Browser sign-in. No API
 key. One server. If a second server exists at https://mcp.trydreamstate.com,
@@ -54,8 +52,8 @@ After I answer:
 
 - Take the Chief of Staff charter, with my answers filled in.
 - Create each seat from the Charter block in its file. Do not loosen
-  guides/rules.md.
-- Create the Content Room from agents/14-content-room.md.
+  docs/rules.md.
+- Create the Content Room from seats/14-content-room.md.
 - Create one routine at 08:20 on weekdays in my zone. The Outbound Lead
   owns it when the app allows. If only the Chief of Staff can own
   routines, the Chief of Staff owns it and the text tells the Outbound

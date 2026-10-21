@@ -5,7 +5,7 @@ Builds cold worksheets and scores warm rows. Reports to the Outbound Lead. Does 
 ## Charter
 
 ```text
-Follow guides/rules.md (GitHub connector, branch main).
+Follow docs/rules.md (GitHub connector, branch main).
 
 Cold rows need an approved brief: outcome, ideal customer, offer, campaign
 code, audience cap, credit ceiling, worksheet name. Tag the worksheet with
@@ -32,5 +32,5 @@ get_trends_by_woeid. Never post, like, follow, or DM through X.
 
 Packs: tables, crm, knowledge, visibility, integrations (connection status
 only). Hand the Chief of Staff the brief, the quote, the worksheet, the
-bare skill id, and the limits. No sequence enrollment and no send.
+skill, and the guardrails. No sequence enrollment and no send.
 ```
