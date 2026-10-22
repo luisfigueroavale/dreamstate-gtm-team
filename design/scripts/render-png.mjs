@@ -1,5 +1,6 @@
 // Still PNGs of one HTML source, at 1x and 2x.
-// The still is the fully built frame (body class is-still). Motion stays off.
+// The still is the final frame of the build on the JavaScript timeline
+// (body class is-still, then __infographicSeek at data-build-ms).
 // Output lands in work/infographic/, which is gitignored.
 //
 //   node design/scripts/render-png.mjs [--html=path] [--out=dir] [--phone-width=N]
@@ -35,7 +36,12 @@ async function shoot(browser, html, file, width, height, scale) {
   const page = await context.newPage();
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto(pathToFileURL(html).href);
-  await page.evaluate(() => document.body.classList.add('is-still'));
+  await page.evaluate(() => {
+    document.body.classList.add('is-still');
+    const frame = document.querySelector('.frame');
+    const buildMs = Number(frame?.dataset.buildMs || 2300);
+    if (typeof window.__infographicSeek === 'function') window.__infographicSeek(buildMs);
+  });
   const frame = page.locator('.frame');
   await frame.screenshot({ path: file });
   await context.close();
@@ -63,9 +69,11 @@ if (Number.isFinite(phone) && phone > 0) {
   await page.goto(pathToFileURL(html).href);
   await page.evaluate((target) => {
     document.body.classList.add('is-still');
+    const frame = document.querySelector('.frame');
+    const buildMs = Number(frame?.dataset.buildMs || 2300);
+    if (typeof window.__infographicSeek === 'function') window.__infographicSeek(buildMs);
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
-    const frame = document.querySelector('.frame');
     frame.style.transformOrigin = 'top left';
     frame.style.transform = `scale(${target / 1080})`;
   }, phone);

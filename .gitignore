@@ -1,4 +1,6 @@
-# Local brand fill-in for one team. The shared files stay blank.
-design/brand.local.md
-design/tokens.local.css
+# Filled brand and audience for one team. The shared files stay blank.
+brand.local/
+audience.local/
+
+# Render output and other local work. Not a second brand copy.
 work/

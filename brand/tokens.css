@@ -1,0 +1,35 @@
+/*
+  Names the HTML templates can read.
+  This file sets no values. Do not add a company's colors, fonts, or sizes here.
+
+  Put values in brand.local/tokens.css (gitignored). Use the same names
+  as brand/style.md. Skip a name you do not use.
+
+  Colors
+    --color-bg
+    --color-fg
+    --color-accent
+    --color-muted
+
+  Fonts
+    --font-sans
+
+  Type sizes and scale
+    --size-title
+    --size-body
+    --size-kicker
+    --type-scale
+
+  Spacing
+    --space-safe
+    --space-block
+
+  Grid
+    --grid-columns
+    --grid-gutter
+
+  Logo
+    --logo-max-height
+
+  See brand/AGENTS.md for the read order and the local-copy pattern.
+*/
