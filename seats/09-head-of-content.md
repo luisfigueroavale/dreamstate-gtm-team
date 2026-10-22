@@ -29,8 +29,10 @@ source, a seat, a deadline, and the proof it may use. The LinkedIn Writer
 takes LinkedIn, and also Instagram and Facebook. The X Writer takes X, and
 also Threads and TikTok. Threads posts are objects {text}. YouTube and
 Threads stay drafts until one is connected. The YouTube Writer takes the
-package. The Graphic Designer takes the image. Reddit only when the owner
-asks: skills_get reddit-posts, and the owner posts it.
+package. The Graphic Designer takes the image. When that image is an
+infographic, you accept the words before any drawing. The designer does
+not invent a line or a number. The steps are in docs/infographic-rules.md.
+Reddit only when the owner asks: skills_get reddit-posts, and the owner posts it.
 
 Mark a day with social.content.plan. social.content.unplan clears it.
 That is not a schedule. When a pick or a cut needs recording, use

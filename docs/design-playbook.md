@@ -28,6 +28,7 @@ You can skip the brand file and style each piece yourself.
 | `quote-stat-card.html` | 1080×1080 | A quote or a figure |
 | `youtube-thumbnail.html` | 1280×720 | A thumbnail frame |
 | `diagram-frame.html` | 1280×720 | A frame for an SVG |
+| `infographic-steps.html` | 1080×1350 | Numbered steps. The still and the motion are the same file. |
 
 The sizes are starters you can change. They are not platform rules. You can start from a template, or you can build your own frame. A figure stays off the card unless you can name its source.
 
@@ -86,6 +87,24 @@ These export settings are a starting point, not a LinkedIn rule. This page does 
 
 If the owner wrote different numbers in the local brand file, use those instead. If you are unsure, leave the item marked to-check and ask.
 
+For a numbered infographic, use the scripts in `design/scripts/` instead of the sample commands above. Those scripts use a different working frame rate. That rate is also to-check. Do not treat either set of numbers as a platform rule.
+
+## An infographic, if you want one
+
+The steps are in [infographic-rules.md](infographic-rules.md). They are optional.
+
+The Head of Content accepts the words before you draw. You do not invent a line or a number. You do not write the caption that ships.
+
+The starter is `design/templates/infographic-steps.html`. It is 1080 by 1350. The still and the motion come from that one file. Pieces arrive in reading order, and the full build, including the closing line, is on screen by about 2.3 seconds. A gentle loop of about 6 seconds follows, and that loop starts and ends on the same pose. The still PNG is the full build. Export the motion only after the owner has accepted that still. A GIF of the motion may open on an empty frame so the build can play again. The still PNG stays as the fallback.
+
+On the owner's Mac:
+
+- `design/scripts/render-png.mjs` writes a still PNG at 1× and at 2×.
+- `design/scripts/capture-frames.mjs` writes frames and a filmstrip.
+- `design/scripts/export-motion.mjs` writes an MP4, a GIF, and a PNG fallback.
+
+Look at the filmstrip and at phone width. The script does not approve the piece. The owner is the final reviewer. Sizes and frame rates in the infographic rules are working numbers. To-check. They are not platform rules.
+
 ## 7. The source is what you keep
 
 Deliver the HTML or SVG source, the PNG or PDF, and the GIF or MP4 when you made one. Store the source with `social.visuals.source_create` (HTML, CSS, or SVG). Read it back with `social.visuals.source_get` and `social.visuals.source_list`. Render with `social.visuals.render_preview`, then `social.visuals.render_start` (PNG or PDF, including a phone-width check), then `social.visuals.render_get` and `social.visuals.download_url`.
@@ -111,7 +130,7 @@ These come from the seat charter and the rules. They are not optional.
 Content and design run on the owner's Mac. You need these only if you choose the matching step:
 
 - mermaid-cli, if you render a diagram from Mermaid.
-- Playwright or headless Chrome, if Codex captures frames.
-- ffmpeg, if you export an MP4 or a GIF.
+- Playwright or headless Chrome, if Codex captures frames. The infographic scripts use Playwright.
+- ffmpeg, if you export an MP4 or a GIF. `design/scripts/export-motion.mjs` calls it.
 
 Skip the tools you do not use.

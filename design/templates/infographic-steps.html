@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Numbered steps starter</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../tokens.local.css">
+  <style>
+    html, body { margin: 0; }
+    .frame {
+      box-sizing: border-box;
+      width: 1080px;
+      height: 1350px;
+      padding: var(--space-safe, 0px);
+      background: var(--color-bg, Canvas);
+      color: var(--color-fg, CanvasText);
+      font-family: var(--font-sans, sans-serif);
+      font-size: var(--size-body, 1.25rem);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-block, 20px);
+    }
+    h1 {
+      font-size: var(--size-title, 2.4rem);
+      line-height: 1.15;
+      margin: 0;
+    }
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-block, 16px);
+      flex: 1;
+    }
+    li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      border: 2px solid currentColor;
+      padding: 16px 20px;
+    }
+    .num {
+      font-size: var(--size-title, 2rem);
+      line-height: 1;
+    }
+    .name {
+      font-size: var(--size-kicker, 1.15rem);
+      margin: 0 0 8px;
+    }
+    .lines { margin: 0; }
+    .cta {
+      margin: 0;
+      font-size: var(--size-title, 1.8rem);
+      line-height: 1.2;
+    }
+    .footer {
+      margin: 0;
+      font-size: var(--size-kicker, 1rem);
+    }
+    /* Reading order: title, steps 1 to 4, closing line.
+       Each arrival is 0.4s ease-out. The closing line finishes at 2.3s.
+       Then one 6s loop whose start and end match. No bounce, no blink. */
+    .rise {
+      animation: arrive 0.4s ease-out var(--delay, 0s) both;
+    }
+    .part {
+      animation: drift 6s ease-in-out 2.3s infinite;
+    }
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes drift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    body.is-still .rise,
+    body.is-still .part {
+      animation: none;
+    }
+    body.is-still .rise {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Optional starter. 1080 by 1350. Still and motion are this same file. -->
+  <!-- Replace the placeholder lines with words the Head of Content already accepted. -->
+  <article class="frame" data-build-ms="2300" data-loop-ms="6000">
+    <header class="part">
+      <div class="rise" style="--delay: 0s">
+        <h1>Your headline</h1>
+      </div>
+    </header>
+    <ol>
+      <li class="part">
+        <div class="rise" style="--delay: 0.4s">
+          <div class="num">1</div>
+        </div>
+        <div class="rise" style="--delay: 0.4s">
+          <p class="name">Name the step</p>
+          <p class="lines">Add one useful line. Stop before a fourth line.</p>
+        </div>
+      </li>
+      <li class="part">
+        <div class="rise" style="--delay: 0.8s">
+          <div class="num">2</div>
+        </div>
+        <div class="rise" style="--delay: 0.8s">
+          <p class="name">Name the step</p>
+          <p class="lines">Add one useful line. Stop before a fourth line.</p>
+        </div>
+      </li>
+      <li class="part">
+        <div class="rise" style="--delay: 1.2s">
+          <div class="num">3</div>
+        </div>
+        <div class="rise" style="--delay: 1.2s">
+          <p class="name">Name the step</p>
+          <p class="lines">Add one useful line. Stop before a fourth line.</p>
+        </div>
+      </li>
+      <li class="part">
+        <div class="rise" style="--delay: 1.6s">
+          <div class="num">4</div>
+        </div>
+        <div class="rise" style="--delay: 1.6s">
+          <p class="name">Name the step</p>
+          <p class="lines">Add one useful line. Stop before a fourth line.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="cta part">
+      <span class="rise" style="--delay: 1.9s">Your next step</span>
+    </p>
+    <p class="footer part">
+      <span class="rise" style="--delay: 1.9s">Your slide number</span>
+    </p>
+  </article>
+</body>
+</html>
