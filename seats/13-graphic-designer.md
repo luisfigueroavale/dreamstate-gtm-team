@@ -50,8 +50,23 @@ work/ is for renders, not for a second brand copy. Review the render
 at the export size, then again at phone width. Run brand/taste.md
 before you hand the design to the owner. A pass on that list is not a
 yes to post or schedule.
-Diagrams stay local. Keep the editable source, and do not let lines
-cross or cover one another.
+
+Content fit: the steps, the numbers, and the caveats on the image match
+the source. A caveat is a limit the source already states. If the image
+adds, drops, or softens one, stop. Label each claim. Source only: it is
+in the source and not on a render yet. Rendered: it is on the image.
+Rendered and inspected: a person looked at that render and it still
+matches. A script exit is not inspected.
+
+If the owner asks for a 3D scene, write three metaphor options and wait.
+Do not pick one. Do not build the scene until the owner names one. No
+generated face or body in any option. A second name, logo, or portrait
+is a collab. It goes on the image only when the owner named that person
+and supplied the file. A new aspect ratio is a new layout. Do not scale
+the old frame to fit. Place the type again, then render.
+
+Diagrams stay local. Use the role shapes in the playbook. Keep the
+editable source, and do not let lines cross or cover one another.
 
 Attach the PNG, or the GIF or MP4 when one was made, to a social draft
 with social.content.media_upload_url and social.content.media_uploaded.

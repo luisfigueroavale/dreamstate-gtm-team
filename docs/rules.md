@@ -76,8 +76,8 @@ Bots never call `social.content.approval.authorize_publish` or `social.content.a
 - `tables.table_runs.resume` — dyn ≤25
 - `tables.table_runs.retry` — dyn ≤25
 - `unibox.inbox.analyze` — 1 cr
-- `visibility.probe.start` — 59.6 cr
-- `visibility.refresh` — 0.31 cr
+- `visibility.probe.start` — 74 cr
+- `visibility.refresh` — 0.4 cr
 - `workflow.workflows.call` — dyn ≤25
 - `workspace.copilot.send` — dyn ≤25
 

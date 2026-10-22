@@ -61,6 +61,7 @@ const context = await browser.newContext({
 const page = await context.newPage();
 await page.emulateMedia({ reducedMotion: 'no-preference' });
 await page.goto(pathToFileURL(html).href);
+await page.evaluate(() => document.fonts.ready);
 const timing = await page.evaluate(() => {
   const frame = document.querySelector('.frame');
   return {
