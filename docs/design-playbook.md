@@ -29,6 +29,26 @@ A clear background, the browser's text color, or a generic sans-serif is not a b
 
 Before the work goes to the owner, run [brand/taste.md](../brand/taste.md).
 
+### When the local brand changes
+
+A change in `brand.local/` is not done until you list what it touches and look at each one again. If the font file is missing, stop. Do not swap in another family and call it the brand. The render scripts wait for `document.fonts.ready` before they shoot.
+
+Style, tokens, or assets. Re-render every template that reads the changed variable:
+
+- `design/templates/linkedin-carousel-slide.html`
+- `design/templates/single-image-square.html`
+- `design/templates/single-image-wide.html`
+- `design/templates/quote-stat-card.html`
+- `design/templates/youtube-thumbnail.html`
+- `design/templates/diagram-frame.html`
+- `design/templates/infographic-steps.html`
+
+Scripts that shoot those files: `design/scripts/render-png.mjs`, `design/scripts/capture-frames.mjs`, `design/scripts/export-motion.mjs`.
+
+Seats: the Graphic Designer re-renders. The YouTube Writer updates a thumbnail brief that named a size or a font.
+
+Voice or identity. Open drafts are stale. The Head of Content, the LinkedIn Writer, the X Writer, the YouTube Writer, the Outbound Copywriter, and Social Engagement run `brand/taste.md` again before the work goes to the owner.
+
 ## 2. Templates, if you want a starter
 
 `design/templates/` holds a few HTML starters. Each one imports `brand/tokens.css` and `brand.local/tokens.css`. Until the local CSS file sets a variable, the frame uses a clear background, the browser's text color, and a generic sans-serif. Those are not a brand. Do not ship a frame that only has them.
@@ -44,6 +64,14 @@ Before the work goes to the owner, run [brand/taste.md](../brand/taste.md).
 | `infographic-steps.html` | 1080×1350 | Numbered steps. The still and the motion are the same file. |
 
 The sizes are starters you can change. They are not platform rules. You can start from a template, or you can build your own frame. A figure stays off the card unless you can name its source.
+
+### Carousel
+
+Check every slide, then check the set as a sequence.
+
+Every slide: the footer number matches its place, the nameplate matches the other slides, the type fits without shrinking, the words are the accepted copy, and nothing overlaps.
+
+Sequence: read the slides in order. Numbers run from 1 with no gap and no repeat. A slide does not rely on a later slide. The last slide is the closing line. One slide that looks fine can still break the set.
 
 ## 3. Match a reference, if you are given one
 
@@ -63,6 +91,16 @@ flowchart TD
 ```
 
 You can draw a diagram another local way. The same two rules apply: it stays local, and lines do not cross or cover each other.
+
+Use one shape per role. Draw the icon in the SVG. Do not import an icon font.
+
+| Role | Shape | Icon |
+|---|---|---|
+| Source | Rectangle | A tray: a box with an open top. What comes in. |
+| Step | Rectangle | A square with one verb inside. One action. |
+| Skill | Rectangle, double border | A tag under the step. The skill id, not a second action. |
+| Decision | Diamond | The diamond. Two exits. |
+| Result | Circle | A circle. What comes out. |
 
 ## 5. Work one frame at a time, if that helps
 

@@ -36,6 +36,7 @@ async function shoot(browser, html, file, width, height, scale) {
   const page = await context.newPage();
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto(pathToFileURL(html).href);
+  await page.evaluate(() => document.fonts.ready);
   await page.evaluate(() => {
     document.body.classList.add('is-still');
     const frame = document.querySelector('.frame');
@@ -67,6 +68,7 @@ if (Number.isFinite(phone) && phone > 0) {
   const page = await context.newPage();
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto(pathToFileURL(html).href);
+  await page.evaluate(() => document.fonts.ready);
   await page.evaluate((target) => {
     document.body.classList.add('is-still');
     const frame = document.querySelector('.frame');
