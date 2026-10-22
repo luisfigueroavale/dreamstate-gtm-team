@@ -1,24 +1,37 @@
 # Design playbook
 
-Optional steps for the Graphic Designer. Use your own style. Nothing in this page is forced. The seat charter and [rules.md](rules.md) still apply when you do the work.
+Steps for the Graphic Designer. Use the owner's style from the local brand files. Do not invent a look those files do not state. The seat charter and [rules.md](rules.md) still apply.
 
-A source is the HTML, CSS, or SVG you can edit. A render is a PNG or PDF made from that source. A CSS variable is a named value, such as a color, that a template can read. Your values live only in a local file.
+The brand folder is required before a design. The templates, the diagram step, and the motion step stay optional.
+
+A source is the HTML, CSS, or SVG you can edit. A render is a PNG or PDF made from that source. A CSS variable is a named value, such as a color, that a template can read. Your values live only in the local brand copy.
 
 This repo is for any team. It ships no brand colors, fonts, or logo rules. Do not put a company's values in a committed file. Do not paste Company Context into one. Company Context is the pages in that team's own Dreamstate workspace.
 
-## 1. Brand rules, if you want them
+## 1. Brand folder, required
 
-`design/brand.md` is a blank form. Copy it to `design/brand.local.md` in your checkout, or put the copy under `work/`. Fill the copy. Both paths are in `.gitignore`.
+Read [brand/AGENTS.md](../brand/AGENTS.md) first. The shared files in `brand/` are blank templates. The filled copy is `brand.local/`, with the same file names. That folder is in `.gitignore`. `work/` is for renders, not for a second brand copy.
 
-The form has places for colors, fonts, type sizes, spacing, logo usage, and safe margins. You can read your own Tone of Voice page, Product Information page, and thumbnail preferences (`workspace.thumbnail_preferences_get`) while you fill the local copy. Write the values only there. If a page does not state a value, leave the line blank. Do not invent a brand color.
+Required before you design:
 
-If you want the templates to use those values, put them in `design/tokens.local.css` under the names in `design/tokens.css`. That CSS file is gitignored. The shared `design/tokens.css` sets nothing.
+- `brand.local/identity.md`
+- `brand.local/voice.md`
+- `brand.local/style.md`
+- `brand.local/tokens.css`
 
-You can skip the brand file and style each piece yourself.
+When the piece uses a logo, a photo, or an icon, `brand.local/assets/README.md` must list that file. If a required file is missing or a required line is blank, stop and ask the owner. Never guess.
+
+You can read your own Tone of Voice page, Product Information page, and thumbnail preferences (`workspace.thumbnail_preferences_get`) while the owner fills the local copy. Write the values only there. If a page does not state a value, leave the line blank. Do not invent a brand color.
+
+Templates import `brand/tokens.css` and `brand.local/tokens.css`. The shared CSS file sets nothing. Mirror the values from `brand.local/style.md` into `brand.local/tokens.css`. When you store the source in Dreamstate, copy the variables you are using into that file's own style block. Do not commit those values back to `brand/tokens.css`.
+
+A clear background, the browser's text color, or a generic sans-serif is not a brand. Do not hand the owner a design that only has those fallbacks.
+
+Before the work goes to the owner, run [brand/taste.md](../brand/taste.md).
 
 ## 2. Templates, if you want a starter
 
-`design/templates/` holds a few HTML starters. Each one reads the CSS variables. Until your local CSS file sets a variable, the frame uses a clear background, the browser's text color, and a generic sans-serif. Those are not a brand.
+`design/templates/` holds a few HTML starters. Each one imports `brand/tokens.css` and `brand.local/tokens.css`. Until the local CSS file sets a variable, the frame uses a clear background, the browser's text color, and a generic sans-serif. Those are not a brand. Do not ship a frame that only has them.
 
 | File | Starter size | What it is |
 |---|---|---|
@@ -34,7 +47,7 @@ The sizes are starters you can change. They are not platform rules. You can star
 
 ## 3. Match a reference, if you are given one
 
-If the owner gives you a screenshot or an example post, you can match its layout: the columns, the crop, and which line is largest. Use your own colors, type, and logo from the local brand file. If that file is blank, ask the owner. Do not invent colors to imitate the example.
+If the owner gives you a screenshot or an example post, you can match its layout: the columns, the crop, and which line is largest. Use the colors, type, and logo from `brand.local/style.md` and `brand.local/assets/`. If those files are blank, ask the owner. Do not invent colors to imitate the example.
 
 Do not copy someone else's logo, photo, or illustration. Do not trace their files.
 
@@ -53,11 +66,11 @@ You can draw a diagram another local way. The same two rules apply: it stays loc
 
 ## 5. Work one frame at a time, if that helps
 
-You can finish one slide or one frame, then the next. The charter still asks you to review a render at its export size, then again at phone width, before you treat it as ready. This repo does not name the phone width in pixels. Use the width in your local brand file if you wrote one. If the line is blank, ask the owner. Do not invent a pixel width.
+You can finish one slide or one frame, then the next. The charter still asks you to review a render at its export size, then again at phone width, before you treat it as ready. This repo does not name the phone width in pixels. Use the width in `brand.local/style.md` if the owner wrote one. If the line is blank, ask the owner. Do not invent a pixel width.
 
 ## 6. A GIF or MP4, if you want motion
 
-This is optional. Start from a static HTML source the owner has already accepted. Animate that same source with CSS keyframes. Keep the motion simple: a reveal, a counter, or a build that shows one step at a time.
+This is optional. Start from a static HTML source the owner has already accepted. Drive the motion with a JavaScript timeline in that same file. The timeline moves the HTML, CSS, and SVG already there. CSS holds the layout. It does not run the motion by itself. Keep the motion simple: a reveal, a counter, or a build that shows one step at a time.
 
 On the owner's Mac, Codex can open the file in headless Chrome or Playwright and save a PNG for each frame. Then ffmpeg can make the video files.
 
@@ -85,17 +98,17 @@ These export settings are a starting point, not a LinkedIn rule. This page does 
 - MP4: H.264 at 24 frames a second in the command above. To-check.
 - File size: try to stay under about 2 MB for the GIF and about 5 MB for the MP4. To-check.
 
-If the owner wrote different numbers in the local brand file, use those instead. If you are unsure, leave the item marked to-check and ask.
+If the owner wrote different numbers in `brand.local/style.md`, use those instead. If you are unsure, leave the item marked to-check and ask.
 
 For a numbered infographic, use the scripts in `design/scripts/` instead of the sample commands above. Those scripts use a different working frame rate. That rate is also to-check. Do not treat either set of numbers as a platform rule.
 
 ## An infographic, if you want one
 
-The steps are in [infographic-rules.md](infographic-rules.md). They are optional.
+The steps are in [infographic-rules.md](infographic-rules.md). They are optional. Read [brand/AGENTS.md](../brand/AGENTS.md) first. Run [brand/taste.md](../brand/taste.md) before the piece goes to the owner.
 
 The Head of Content accepts the words before you draw. You do not invent a line or a number. You do not write the caption that ships.
 
-The starter is `design/templates/infographic-steps.html`. It is 1080 by 1350. The still and the motion come from that one file. Pieces arrive in reading order, and the full build, including the closing line, is on screen by about 2.3 seconds. A gentle loop of about 6 seconds follows, and that loop starts and ends on the same pose. The still PNG is the full build. Export the motion only after the owner has accepted that still. A GIF of the motion may open on an empty frame so the build can play again. The still PNG stays as the fallback.
+The starter is `design/templates/infographic-steps.html`. It is 1080 by 1350. The still and the motion come from that one file. A script in the file is the timeline. It seeks to a time in milliseconds. Pieces arrive in reading order, and the full build, including the closing line, is on screen by about 2.3 seconds. A gentle loop of about 6 seconds follows, and that loop starts and ends on the same pose. The still PNG is the final frame of that build, from the same seek. `design/scripts/render-png.mjs` and `design/scripts/capture-frames.mjs` call that seek. Export the motion only after the owner has accepted that still. A GIF of the motion may open on an empty frame so the build can play again. The still PNG stays as the fallback.
 
 On the owner's Mac:
 
@@ -123,7 +136,7 @@ These come from the seat charter and the rules. They are not optional.
 - No metric on an image unless you can name the source.
 - Google Drive is read-only, for photos the owner stored.
 - Do not write the caption that ships.
-- Do not commit `design/brand.local.md`, `design/tokens.local.css`, or anything under `work/`.
+- Do not commit `brand.local/` or anything under `work/`. The shared files in `brand/` stay blank.
 
 ## Tools on the Mac
 

@@ -1,8 +1,10 @@
 # Infographic rules
 
-Optional steps for a numbered infographic. Use your own style. Nothing here is forced. The Graphic Designer charter, the [design playbook](design-playbook.md), and [rules.md](rules.md) still apply.
+Optional steps for a numbered infographic. Use the owner's style from the local brand files. The brand folder and the audience folder are required before you draw. The Graphic Designer charter, the [design playbook](design-playbook.md), and [rules.md](rules.md) still apply.
 
 This repo is for any team. It ships no brand colors, fonts, or logo rules. Do not put a company's values in these files.
+
+Read [brand/AGENTS.md](../brand/AGENTS.md) before you draw. `brand.local/style.md` and `brand.local/tokens.css` are required. If they are missing or blank, stop and ask. Never guess. Run [brand/taste.md](../brand/taste.md) before the piece goes to the owner. The owner is still the final reviewer.
 
 A source is the HTML you can edit. The still and the motion come from that same source. A still is the fully built frame with motion turned off. A filmstrip is a short row of frames from the motion, so a person can see the start, the built frame, and the restart.
 
@@ -39,11 +41,13 @@ If you are unsure, leave the item marked to-check and ask the owner.
 
 ## Motion
 
+The motion is a JavaScript timeline in the same HTML file. CSS and SVG hold the layout and the picture. They do not run the motion by themselves. The script moves those elements. `design/scripts/capture-frames.mjs` and `design/scripts/render-png.mjs` seek that same timeline.
+
 Pieces arrive in reading order. Each arrival lasts 0.4 seconds, with an ease-out, and with no bounce. The title, the steps, and the closing line are all on screen by about 2.3 seconds.
 
 After that, one gentle loop of about 6 seconds. The end of that loop matches its start. Nothing blinks.
 
-The still PNG is the fully built frame from the same HTML. The script adds the class `is-still` so the motion is off and every piece is visible. Do not export the motion until the owner has accepted that still.
+The still PNG is the final frame of that build, from the same source and the same seek. That frame is the timeline at about 2.3 seconds, when every piece is visible. The loop returns to that same pose. The render script adds the class `is-still` and seeks to that frame. Do not export the motion until the owner has accepted that still.
 
 A GIF may restart on the empty first frame, so the build plays again. An MP4 of the same frames starts empty, builds, then plays the gentle loop once. If a player repeats that file from the first frame, the repeat cuts back to empty. To-check whether you want that repeat. The gentle loop itself does not jump.
 
@@ -53,7 +57,7 @@ Put one real next step on the image, and no extra pitch. The Head of Content sup
 
 ## Review
 
-Look at the render at the export size, then again at phone width. This repo does not set the phone width in pixels. Use the width in the local brand file if the owner wrote one. If that line is blank, ask. Do not invent a pixel width. Pass `--phone-width=` to the render script when you have a number.
+Look at the render at the export size, then again at phone width. This repo does not set the phone width in pixels. Use the width in `brand.local/style.md` if the owner wrote one. If that line is blank, ask. Do not invent a pixel width. Pass `--phone-width=` to the render script when you have a number. The filmstrip below is part of the review. `brand/taste.md` does not replace it.
 
 Use the filmstrip the capture script writes under `work/infographic/review/`:
 

@@ -72,8 +72,10 @@ Orientation, in this order:
     description, and chapters. It does not upload.
   - Graphic Designer builds graphics, thumbnail frames, carousels, and
     diagrams. A GIF or MP4 is optional. It does not write the caption
-    that ships. The steps in docs/design-playbook.md are optional, and
-    design/brand.md stays a blank form.
+    that ships. It reads brand/AGENTS.md first, then audience/AGENTS.md.
+    The shared brand/ and audience/ files stay blank. The template steps
+    in docs/design-playbook.md are optional. A numbered infographic uses
+    a JavaScript timeline in the HTML file.
   - Content Room is the content group chat. It holds pointers (channel,
     angle, file, deadline), not the draft. It does not publish.
 - Dreamstate is the workspace that holds pages, tables, sequences, and
@@ -147,16 +149,29 @@ After I answer:
   Lead to run the rollup and return the note. No other routine.
 - Install the plugin skills into the coding checkout if they are not
   there yet. Do not add a second MCP server while you do that.
-- Design setup. Keep design/brand.md as the blank form. Do not write
-  company colors, fonts, logo rules, or Company Context into that file
-  or into any committed file. Copy the blank form to
-  design/brand.local.md in the coding checkout, or under work/, and
-  leave every field blank for me to fill. Those paths are in
-  .gitignore. The HTML files under design/templates/ are optional
-  starters. I use my own style. Nothing in docs/design-playbook.md is
-  forced. If I want diagrams or GIFs, say that the Mac needs ffmpeg,
-  Playwright or headless Chrome, and mermaid-cli. Do not post or
-  schedule.
+- Design setup. Keep the files in brand/ as blank templates. Do not
+  write company colors, fonts, logo rules, claims, or Company Context
+  into those files or into any committed file. Copy them to brand.local/
+  with the same names, and leave every field blank for me to fill.
+  brand.local/ is in .gitignore. work/ is for renders, not for a second
+  brand copy. Content and design seats read brand/AGENTS.md first. If a
+  required local file is missing or blank, they stop and ask. They run
+  brand/taste.md before they hand work to me. The HTML files under
+  design/templates/ are optional starters. I use my own style. The
+  template, diagram, and motion steps in docs/design-playbook.md are
+  optional. If I want diagrams or GIFs, say that the Mac needs ffmpeg,
+  Playwright or headless Chrome, and mermaid-cli. A numbered infographic
+  moves on a JavaScript timeline in the same HTML file. The still is the
+  final frame of that build. Do not post or schedule.
+- Audience setup. Keep the files in audience/ as blank templates. Do not
+  write a real reader, or any yes or no answer, into those files. Copy
+  them to audience.local/ with the same names, and leave every answer
+  blank for me to fill. audience.local/ is in .gitignore. The ideal
+  follower is the reader. The ideal customer is the buyer and stays in
+  Company Context. Content seats, Social Engagement, and the Lead
+  Sourcer read audience/AGENTS.md before they draft or score the reader.
+  If the local file is missing or blank, they stop and ask. They do not
+  guess.
 - Do not connect a new app, send, post, enroll, launch, spend, or delete.
   whoami is allowed. tools_run is not.
 - Final report, in plain words. Do not only list names. For each thing
@@ -195,10 +210,16 @@ After I answer:
     of Voice), connecting senders and mailboxes (each needs my yes), and
     the first lead list. Also cover how to set up the content plan, the
     writing style, and leads, as docs/start-here.md describes them.
-    Include the design form: design/brand.md stays blank, and I fill
-    design/brand.local.md or a file under work/ myself. Do not pull
-    Company Context into a committed file. Only include steps the files
-    support.
+    Include the brand folder: brand/ stays blank, and I fill brand.local/
+    myself, same file names. Content and design seats read
+    brand/AGENTS.md first and run brand/taste.md before they hand work
+    to me. Include the audience folder: audience/ stays blank, and I
+    fill audience.local/ myself. The ideal follower is the reader. The
+    ideal customer is the buyer and stays in Company Context. Content
+    seats, Social Engagement, and the Lead Sourcer read
+    audience/AGENTS.md before they draft or score the reader. Do not
+    pull Company Context into a committed file. Only include steps the
+    files support.
 ```
 
 ## After setup
@@ -209,4 +230,4 @@ Sign in to Dreamstate once in Grok Bot's connector settings. Every seat sees tha
 
 Create the Chief of Staff and paste its charter. Add other seats when you need them. Then the Content Room and the single routine at 08:00 on weekdays, using the same ownership fallback as the prompt.
 
-When you finish, give the owner the same map as [docs/start-here.md](docs/start-here.md), in plain words, with the names and ids you created. Point them at that file. Cover who does what, who they talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. For design, leave [design/brand.md](design/brand.md) blank and tell the owner to fill `design/brand.local.md` or a file under `work/`. Point them at [docs/design-playbook.md](docs/design-playbook.md). The steps there are optional. If a file does not define a step, call it an open item.
+When you finish, give the owner the same map as [docs/start-here.md](docs/start-here.md), in plain words, with the names and ids you created. Point them at that file. Cover who does what, who they talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. For the brand folder, leave [brand/](brand/) blank and tell the owner to fill `brand.local/` with the same file names. Content and design seats read [brand/AGENTS.md](brand/AGENTS.md) first and run [brand/taste.md](brand/taste.md) before they hand work to the owner. For the audience folder, leave [audience/](audience/) blank and tell the owner to fill `audience.local/`. The ideal follower is the reader. The ideal customer is the buyer and stays in Company Context. Content seats, Social Engagement, and the Lead Sourcer read [audience/AGENTS.md](audience/AGENTS.md) before they draft or score the reader. Point them at [docs/design-playbook.md](docs/design-playbook.md). The template steps there are optional. A numbered infographic uses a JavaScript timeline in the HTML file. If a file does not define a step, call it an open item.

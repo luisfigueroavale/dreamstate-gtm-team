@@ -1,4 +1,6 @@
 // Capture PNG frames from the same HTML the still uses.
+// The page exposes window.__infographicSeek. This script seeks that
+// JavaScript timeline. It does not depend on CSS animations.
 // Frame 1 is the empty start. A frame at about 2.3s is the full build.
 // The frame at build + loop should match the build, if the loop is seamless.
 // Writes a filmstrip under work/infographic/review/. It does not approve anything.
@@ -25,11 +27,15 @@ function readArgs(argv) {
 
 async function seek(page, ms) {
   await page.evaluate(async (time) => {
-    const animations = document.getAnimations();
-    await Promise.all(animations.map((item) => item.ready));
-    for (const item of animations) {
-      item.pause();
-      item.currentTime = time;
+    if (typeof window.__infographicSeek === 'function') {
+      window.__infographicSeek(time);
+    } else {
+      const animations = document.getAnimations();
+      await Promise.all(animations.map((item) => item.ready));
+      for (const item of animations) {
+        item.pause();
+        item.currentTime = time;
+      }
     }
     await new Promise((resolve) => {
       requestAnimationFrame(() => requestAnimationFrame(resolve));

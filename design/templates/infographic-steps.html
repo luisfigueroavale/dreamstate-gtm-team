@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Numbered steps starter</title>
-  <link rel="stylesheet" href="../tokens.css">
-  <link rel="stylesheet" href="../tokens.local.css">
+  <link rel="stylesheet" href="../../brand/tokens.css">
+  <link rel="stylesheet" href="../../brand.local/tokens.css">
   <style>
     html, body { margin: 0; }
     .frame {
@@ -60,30 +60,10 @@
       margin: 0;
       font-size: var(--size-kicker, 1rem);
     }
-    /* Reading order: title, steps 1 to 4, closing line.
-       Each arrival is 0.4s ease-out. The closing line finishes at 2.3s.
-       Then one 6s loop whose start and end match. No bounce, no blink. */
+    /* Layout only. The script below is the timeline. */
     .rise {
-      animation: arrive 0.4s ease-out var(--delay, 0s) both;
-    }
-    .part {
-      animation: drift 6s ease-in-out 2.3s infinite;
-    }
-    @keyframes arrive {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes drift {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-3px); }
-    }
-    body.is-still .rise,
-    body.is-still .part {
-      animation: none;
-    }
-    body.is-still .rise {
-      opacity: 1;
-      transform: none;
+      opacity: 0;
+      transform: translateY(16px);
     }
   </style>
 </head>
@@ -92,54 +72,137 @@
   <!-- Replace the placeholder lines with words the Head of Content already accepted. -->
   <article class="frame" data-build-ms="2300" data-loop-ms="6000">
     <header class="part">
-      <div class="rise" style="--delay: 0s">
+      <div class="rise" data-delay-ms="0">
         <h1>Your headline</h1>
       </div>
     </header>
     <ol>
       <li class="part">
-        <div class="rise" style="--delay: 0.4s">
+        <div class="rise" data-delay-ms="400">
           <div class="num">1</div>
         </div>
-        <div class="rise" style="--delay: 0.4s">
+        <div class="rise" data-delay-ms="400">
           <p class="name">Name the step</p>
           <p class="lines">Add one useful line. Stop before a fourth line.</p>
         </div>
       </li>
       <li class="part">
-        <div class="rise" style="--delay: 0.8s">
+        <div class="rise" data-delay-ms="800">
           <div class="num">2</div>
         </div>
-        <div class="rise" style="--delay: 0.8s">
+        <div class="rise" data-delay-ms="800">
           <p class="name">Name the step</p>
           <p class="lines">Add one useful line. Stop before a fourth line.</p>
         </div>
       </li>
       <li class="part">
-        <div class="rise" style="--delay: 1.2s">
+        <div class="rise" data-delay-ms="1200">
           <div class="num">3</div>
         </div>
-        <div class="rise" style="--delay: 1.2s">
+        <div class="rise" data-delay-ms="1200">
           <p class="name">Name the step</p>
           <p class="lines">Add one useful line. Stop before a fourth line.</p>
         </div>
       </li>
       <li class="part">
-        <div class="rise" style="--delay: 1.6s">
+        <div class="rise" data-delay-ms="1600">
           <div class="num">4</div>
         </div>
-        <div class="rise" style="--delay: 1.6s">
+        <div class="rise" data-delay-ms="1600">
           <p class="name">Name the step</p>
           <p class="lines">Add one useful line. Stop before a fourth line.</p>
         </div>
       </li>
     </ol>
     <p class="cta part">
-      <span class="rise" style="--delay: 1.9s">Your next step</span>
+      <span class="rise" data-delay-ms="1900">Your next step</span>
     </p>
     <p class="footer part">
-      <span class="rise" style="--delay: 1.9s">Your slide number</span>
+      <span class="rise" data-delay-ms="1900">Your slide number</span>
     </p>
   </article>
+  <script>
+    // One timeline for the still and the motion. CSS holds the layout.
+    // Reading order: title, steps 1 to 4, closing line.
+    // Each arrival is 400ms ease-out, no bounce. The closing line finishes at 2300ms.
+    // Then one 6000ms loop whose start and end match. Nothing blinks.
+    // The still is this timeline at buildMs, the final frame of the build.
+    (function () {
+      var frame = document.querySelector('.frame');
+      var buildMs = Number(frame.getAttribute('data-build-ms') || 2300);
+      var loopMs = Number(frame.getAttribute('data-loop-ms') || 6000);
+      var arriveMs = 400;
+      var rises = Array.prototype.slice.call(document.querySelectorAll('.rise'));
+      var parts = Array.prototype.slice.call(document.querySelectorAll('.part'));
+      var raf = 0;
+      var origin = 0;
+
+      function easeOut(t) {
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function apply(ms) {
+        var time = ms < 0 ? 0 : ms;
+        rises.forEach(function (el) {
+          var delay = Number(el.getAttribute('data-delay-ms') || 0);
+          var p = (time - delay) / arriveMs;
+          if (p <= 0) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(16px)';
+          } else if (p >= 1) {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          } else {
+            var e = easeOut(p);
+            el.style.opacity = String(e);
+            el.style.transform = 'translateY(' + ((1 - e) * 16) + 'px)';
+          }
+        });
+        parts.forEach(function (el) {
+          if (time < buildMs) {
+            el.style.transform = 'none';
+            return;
+          }
+          var local = (time - buildMs) % loopMs;
+          var y = -3 * Math.sin(Math.PI * (local / loopMs));
+          el.style.transform = 'translateY(' + y + 'px)';
+        });
+      }
+
+      function seek(ms) {
+        if (raf) cancelAnimationFrame(raf);
+        raf = 0;
+        origin = 0;
+        apply(ms);
+      }
+
+      function tick(now) {
+        if (!origin) origin = now;
+        apply(now - origin);
+        raf = requestAnimationFrame(tick);
+      }
+
+      function showStill() {
+        seek(buildMs);
+      }
+
+      window.__infographicSeek = seek;
+      window.__infographic = { seek: seek, buildMs: buildMs, loopMs: loopMs };
+
+      if (document.body.classList.contains('is-still')) {
+        showStill();
+      } else if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        showStill();
+      } else {
+        apply(0);
+        raf = requestAnimationFrame(tick);
+      }
+
+      var watcher = new MutationObserver(function () {
+        if (document.body.classList.contains('is-still')) showStill();
+      });
+      watcher.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    })();
+  </script>
 </body>
 </html>
