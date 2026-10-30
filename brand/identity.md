@@ -12,6 +12,13 @@ A line with nothing after it means this file is blank. Stop and ask the owner.
 
 ## Audience
 
+## Accounts
+
+<!-- Your own handles. The voice and viral reads use them. They stay in brand.local, which git ignores. -->
+
+- X handle:
+- LinkedIn profile URL:
+
 ## Positioning
 
 ## Proof sources
