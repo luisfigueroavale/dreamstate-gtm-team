@@ -12,10 +12,10 @@ Grok Bot holds the seats, one group chat and one routine. [Dreamstate](https://t
 
 1. In Grok Bot, create a Bot named **Chief of Staff**.
 2. Copy the block in **[the setup prompt](setup-prompt.md)** and send it as your first message.
-3. Reply to the six questions it asks: company and offer, Dreamstate workspace, second brain, local repo and runtime, rollup time zone, and which seats to create.
+3. Reply to the seven questions it asks: company and offer, Dreamstate workspace, second brain, local repo and runtime, rollup time zone, which seats to create, and your X handle and LinkedIn profile URL.
 4. It builds the seats, the Content Room and the 08:00 routine, then lists anything the app refused and the click left for you.
 
-Setup connects, sends and spends nothing. To build by hand, paste the Charter block from each file in [seats/](seats/).
+Setup then reads your own posts to learn your voice, reads what is moving in your space, and drafts a first daily plan ([docs/content-day.md](docs/content-day.md)). Setup connects, sends, posts and spends nothing. To build by hand, paste the Charter block from each file in [seats/](seats/).
 
 ## The team you get
 

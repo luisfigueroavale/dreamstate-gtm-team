@@ -20,7 +20,7 @@ Install the skill files from [luisfigueroavale/dreamstate-plugins](https://githu
 
 Create a Bot named Chief of Staff. Paste the block below into its chat.
 
-The block tells that Bot to explain the desk in plain language before the six questions. The explanation covers the team, each seat, Dreamstate and the one server, Company Context, Claude Code or Codex and the plugin skill files, and the 08:00 rollup. Each question says why it is asked. The final report says what each created item does, what the app refused, and what you still need to do. It then gives the same map as [docs/start-here.md](docs/start-here.md), filled in with the names and ids it created, and points at that file. The map covers who does what, who you talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. The consent rules stay as written in [docs/rules.md](docs/rules.md).
+The block tells that Bot to explain the desk in plain language before the seven questions. The explanation covers the team, each seat, Dreamstate and the one server, Company Context, Claude Code or Codex and the plugin skill files, and the 08:00 rollup. Each question says why it is asked. The final report says what each created item does, what the app refused, and what you still need to do. It then gives the same map as [docs/start-here.md](docs/start-here.md), filled in with the names and ids it created, and points at that file. The map covers who does what, who you talk to, who talks to who, and the first-week checklist for the content plan, the writing style, and leads. The consent rules stay as written in [docs/rules.md](docs/rules.md).
 
 ```text
 Build a Dreamstate GTM team from luisfigueroavale/dreamstate-gtm-team,
@@ -32,7 +32,7 @@ Dreamstate MCP: https://mcp.trydreamstate.com/mcp. Browser sign-in. No API
 key. One server. If a second server exists at https://mcp.trydreamstate.com,
 tell me to remove it.
 
-In your first message, give the orientation below, then ask all six
+In your first message, give the orientation below, then ask all seven
 questions, then wait. Do not create anything before I answer. Plain
 language. Short sentences. I may have no context. If you use a term, add
 one line that says what it means. Do not loosen docs/rules.md. This
@@ -107,7 +107,7 @@ Orientation, in this order:
   the app lets only the Chief of Staff own routines, that seat owns it and
   the text tells the Outbound Lead to run the rollup.
 
-Then ask all six in that same message. After each question, one line on
+Then ask all seven in that same message. After each question, one line on
 why you are asking:
 
 1. Company name, the offer, and who it is for.
@@ -136,6 +136,9 @@ why you are asking:
    the one rollup.
    Why: a charter is the written job for that Bot. I will not open a seat
    you do not want yet.
+7. My X handle and my LinkedIn profile URL. Either can be none.
+   Why: the content seats read my own posts to learn my voice, and read
+   what is moving in my space, before they draft anything. Reads only.
 
 After I answer:
 
@@ -172,6 +175,19 @@ After I answer:
   Sourcer read audience/AGENTS.md before they draft or score the reader.
   If the local file is missing or blank, they stop and ask. They do not
   guess.
+- First content pass, read-only, once the seats exist. Follow
+  docs/content-day.md. Keep my handle and profile URL only under Accounts
+  in brand.local/identity.md. The X Writer reads my own last 100 or so X
+  posts with the X read tools in docs/rules.md. The LinkedIn Writer
+  takes any LinkedIn posts I paste. The Head of Content turns them into
+  voice rules, each tied to example post links, for brand.local/voice.md,
+  which stays Status: blank until I flip it. When identity, voice, and
+  the reader are filled, the X Writer runs a first viral read held to
+  docs/viral-bar.md, and the Head of Content drafts a first daily plan.
+  If a file is still blank, stop there and name it as the next step.
+  Never post, like, repost, follow, or DM through X. Do not create a
+  daily plan routine. Ask whether I want one and say it needs its own
+  yes.
 - Do not connect a new app, send, post, enroll, launch, spend, or delete.
   whoami is allowed. tools_run is not.
 - Final report, in plain words. Do not only list names. For each thing
@@ -218,8 +234,10 @@ After I answer:
     ideal customer is the buyer and stays in Company Context. Content
     seats, Social Engagement, and the Lead Sourcer read
     audience/AGENTS.md before they draft or score the reader. Do not
-    pull Company Context into a committed file. Only include steps the
-    files support.
+    pull Company Context into a committed file. Include the content
+    day from docs/content-day.md: my voice rules, the first viral read,
+    and the first daily plan, or the file that still blocks them. Only
+    include steps the files support.
 ```
 
 ## After setup
