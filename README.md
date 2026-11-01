@@ -2,7 +2,7 @@
 
 **Start here if you are new:** [docs/start-here.md](docs/start-here.md) is the plain-language map of this team. It says what each seat does, who you talk to, who talks to who, and what you do in the first week.
 
-**Thirteen Grok Bots run outbound and content on Dreamstate, with Claude Code or Codex doing the actual work.**
+**Sixteen Grok Bots run outbound and content on Dreamstate, with Claude Code or Codex doing the actual work.**
 
 **[Import the team →](setup-prompt.md)** · [The team](#the-team-you-get) · [How it flows](#how-it-flows) · [Rules](docs/rules.md) · [Claude Code and Codex](docs/claude-code-and-codex.md) · [Design playbook](docs/design-playbook.md)
 
@@ -38,6 +38,9 @@ Setup then reads your own posts to learn your voice, reads what is moving in you
 | [YouTube Writer](seats/12-youtube-writer.md) | Head of Content | Titles, thumbnail brief, description, chapters |
 | [Graphic Designer](seats/13-graphic-designer.md) | Head of Content | Graphics, thumbnails, carousels, rendered in Dreamstate |
 | [Content Room](seats/14-content-room.md) | | Group chat for the content seats, pointers only |
+| [Reddit Writer](seats/15-reddit-writer.md) | Head of Content | Reddit drafts and subreddit rules cards; the owner posts |
+| [Launch Video](seats/16-launch-video.md) | Head of Content | Launch video plans: hooks, proof, timed beats, audit |
+| [Slide Designer](seats/17-slide-designer.md) | Head of Content | Slide decks only |
 
 Graphics are HTML, CSS, or SVG stored in Dreamstate. A GIF or MP4 is optional, and a numbered infographic moves on a JavaScript timeline in the same HTML file. Content and design seats read [brand/AGENTS.md](brand/AGENTS.md) first. The shared files in `brand/` are blank. Each team fills `brand.local/`, which is gitignored. Content seats, Social Engagement, and the Lead Sourcer also read [audience/AGENTS.md](audience/AGENTS.md). The ideal follower is the reader. The ideal customer is the buyer and stays in Company Context. The shared files in `audience/` are blank. Each team fills `audience.local/`, which is gitignored. The template steps in [docs/design-playbook.md](docs/design-playbook.md) are optional.
 
@@ -50,7 +53,8 @@ flowchart TD
   CoS --> OL[Outbound Lead] & HC[Head of Content]
   OL --> LS[Lead Sourcer] & OC[Outbound Copywriter] & SD[Sequences & Deliverability] & SE[Social Engagement]
   HC --> CR["Content Room: LinkedIn, X, YouTube, Graphic Designer"]
-  LS & OC & SD & SE & CR & RM & DR --> P["Packet: goal, inputs, skill, guardrails"]
+  HC --> RW[Reddit Writer] & LV[Launch Video] & SL[Slide Designer]
+  LS & OC & SD & SE & CR & RW & LV & SL & RM & DR --> P["Packet: goal, inputs, skill, guardrails"]
   P --> CC["Claude Code or Codex, run by the Chief of Staff"]
   CC --> R["Review: file, draft id, branch or PR"]
   R --> O
