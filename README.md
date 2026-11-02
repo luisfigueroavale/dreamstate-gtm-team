@@ -39,7 +39,7 @@ Setup then reads your own posts to learn your voice, reads what is moving in you
 | [Graphic Designer](seats/13-graphic-designer.md) | Head of Content | Graphics, thumbnails, carousels, rendered in Dreamstate |
 | [Content Room](seats/14-content-room.md) | | Group chat for the content seats, pointers only |
 | [Reddit Writer](seats/15-reddit-writer.md) | Head of Content | Reddit drafts and subreddit rules cards; the owner posts |
-| [Launch Video](seats/16-launch-video.md) | Head of Content | Launch video plans: hooks, proof, timed beats, audit |
+| [Launch Video](seats/16-launch-video.md) | Head of Content | Launch video plans: proof ledger, hooks, timed beats, cut check, launch post drafts, the public launch video library |
 | [Slide Designer](seats/17-slide-designer.md) | Head of Content | Slide decks only |
 
 Graphics are HTML, CSS, or SVG stored in Dreamstate. A GIF or MP4 is optional, and a numbered infographic moves on a JavaScript timeline in the same HTML file. Content and design seats read [brand/AGENTS.md](brand/AGENTS.md) first. The shared files in `brand/` are blank. Each team fills `brand.local/`, which is gitignored. Content seats, Social Engagement, and the Lead Sourcer also read [audience/AGENTS.md](audience/AGENTS.md). The ideal follower is the reader. The ideal customer is the buyer and stays in Company Context. The shared files in `audience/` are blank. Each team fills `audience.local/`, which is gitignored. The template steps in [docs/design-playbook.md](docs/design-playbook.md) are optional.

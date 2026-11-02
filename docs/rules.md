@@ -109,9 +109,9 @@ Grok Bot shares connections across seats. A seat uses only its row.
 | YouTube Writer | `social`, `visibility`, `senders`, `knowledge` | Google Drive, read-only, for footage the owner stored. |
 | Graphic Designer | `social`, `knowledge`, `workspace` | Google Drive, read-only, for photos the owner stored. |
 | Reddit Writer | `social`, `knowledge` | Public subreddit rules pages, read logged out. |
-| Launch Video | `social`, `knowledge`, `visibility` (read stored analytics) | Google Drive, read-only, for footage the owner stored. |
+| Launch Video | `social`, `knowledge`, `visibility` (read only: `visibility.analytics_query`) | X read tools below, plus `get_posts_by_ids` for a launch post's public counts. Google Drive, read-only, for footage the owner stored. GitHub, read-only, for the public launch video library (`luisfigueroavale/dreamstate-launch-videos`). A paid voice, music, or render tool needs a yes. |
 | Slide Designer | `knowledge` | Google Drive, read-only, for decks and photos the owner stored. |
 
-X read tools, for the four seats named above, are read-only: `search_posts_all`, `get_users_posts`, `get_posts_reposted_by`, `get_posts_quoted_posts`, `get_posts_counts_recent`, `get_trends_by_woeid`. Never post, like, follow, or DM through X.
+X read tools, for the five seats named above, are read-only: `search_posts_all`, `get_users_posts`, `get_posts_reposted_by`, `get_posts_quoted_posts`, `get_posts_counts_recent`, `get_trends_by_woeid`. Never post, like, follow, or DM through X.
 
 How file work runs is in [claude-code-and-codex.md](claude-code-and-codex.md).

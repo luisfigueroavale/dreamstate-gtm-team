@@ -78,8 +78,9 @@ Orientation, in this order:
     a JavaScript timeline in the HTML file.
   - Reddit Writer drafts Reddit posts and reads each subreddit's rules.
     It does not post, comment, vote, or message. I post by hand.
-  - Launch Video plans launch videos: hooks, proof, timed beats, and an
-    audit. It does not upload or post.
+  - Launch Video plans launch videos: proof, hooks, timed beats, and an
+    audit, and keeps the public launch video library. It does not upload
+    or post.
   - Slide Designer builds slide decks only.
   - Content Room is the content group chat. It holds pointers (channel,
     angle, file, deadline), not the draft. It does not publish.
