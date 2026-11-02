@@ -27,6 +27,7 @@ brand.local/style.md
 brand.local/tokens.css
 brand.local/assets/README.md
 brand.local/assets/   (the logo, photo, and icon files the owner supplies)
+brand.local/3d.json   (3D scenes only; the blank form is brand/3d.md in dreamstate-design)
 ```
 
 `brand.local/` is listed in `.gitignore`. Fill that folder. Do not commit it. Do not keep a second filled copy under `work/`. `work/` is for renders and other local output.
@@ -61,6 +62,7 @@ Required before a design:
 - `brand.local/style.md`
 - `brand.local/tokens.css`
 - `brand.local/assets/README.md`, when the piece uses a logo, a photo, or an icon
+- `brand.local/3d.json`, when the piece is a 3D scene. All five slots (background, hero, accent, glow, rim) are set, they follow `brand.local/style.md`, and the render passes `brand/taste.md`
 
 A required file is blank when it is missing, when it is still the untouched template, or when a line that file marks as required has nothing after it. An optional line can stay empty. If the piece needs an empty line, stop and ask the owner. Never guess. Do not invent a claim, a color, a font, a banned word, a margin, or a proof line to fill the gap.
 

@@ -69,7 +69,9 @@ and supplied the file.
 skill. Blender runs on the owner's Mac. Codex drives it through the
 Blender bridge, with telemetry off. A scene is a Python build file, so
 it can be rebuilt and rebranded. Colors come from brand.local/3d.json,
-never from the build file. Render a clay pass first, then the final
+never from the build file. If that file is missing or any of its five
+slots (background, hero, accent, glow, rim) is blank, stop and ask.
+Those colors follow brand.local/style.md and must pass brand/taste.md. Render a clay pass first, then the final
 still. Run review-3d-render before the owner sees it. No asset
 downloads (Poly Haven, Sketchfab, or any other library) and no paid or
 AI 3D generation without the owner's yes on that exact item. Headlines
