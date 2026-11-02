@@ -36,7 +36,7 @@ Setup then reads your own posts to learn your voice, reads what is moving in you
 | [LinkedIn Writer](seats/10-linkedin-writer.md) | Head of Content | LinkedIn posts and articles, plus Instagram and Facebook |
 | [X Writer](seats/11-x-writer.md) | Head of Content | X posts, threads, Articles, plus Threads and TikTok |
 | [YouTube Writer](seats/12-youtube-writer.md) | Head of Content | Titles, thumbnail brief, description, chapters |
-| [Graphic Designer](seats/13-graphic-designer.md) | Head of Content | Graphics, thumbnails, carousels, rendered in Dreamstate |
+| [Graphic Designer](seats/13-graphic-designer.md) | Head of Content | Graphics, thumbnails, carousels, rendered in Dreamstate. 3D scenes in local Blender, from [dreamstate-design](https://github.com/luisfigueroavale/dreamstate-design) |
 | [Content Room](seats/14-content-room.md) | | Group chat for the content seats, pointers only |
 | [Reddit Writer](seats/15-reddit-writer.md) | Head of Content | Reddit drafts and subreddit rules cards; the owner posts |
 | [Launch Video](seats/16-launch-video.md) | Head of Content | Launch video plans: proof ledger, hooks, timed beats, cut check, launch post drafts, the public launch video library |
