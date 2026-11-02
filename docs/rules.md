@@ -89,6 +89,8 @@ Company Context pages use `knowledge.brain.context.compose_pages` (dry_run, then
 
 `skills_get` takes the bare id (`plays`), not `dreamstate:plays`. The `dreamstate` skill is not in the workspace. Read `skills/dreamstate/SKILL.md` from [luisfigueroavale/dreamstate-plugins](https://github.com/luisfigueroavale/dreamstate-plugins). Channel copy skills: `youtube-posts`, `instagram-posts`, `tiktok-posts`, `facebook-posts`.
 
+Repo skills live in `skills/` here and are read as files, not with `skills_get`. [write-x-article](../skills/write-x-article/SKILL.md) is the X Writer's skill for X Articles.
+
 ## Connectors
 
 Grok Bot shares connections across seats. A seat uses only its row.

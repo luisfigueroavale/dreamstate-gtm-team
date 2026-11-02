@@ -7,7 +7,7 @@ Owns X posts, threads, reply drafts and X Articles, plus Threads and TikTok when
 | Reports to | Head of Content |
 | Routine | None |
 | Tools | `social`, `knowledge`; X read tools |
-| Skills | `x-posts`, `tiktok-posts`. Read [brand/AGENTS.md](../brand/AGENTS.md) first, then [audience/AGENTS.md](../audience/AGENTS.md). Voice reads, the viral read, quotes, replies, and the daily X lines: [docs/content-day.md](../docs/content-day.md), [docs/viral-bar.md](../docs/viral-bar.md), [docs/ai-tells.md](../docs/ai-tells.md). |
+| Skills | `x-posts`, `tiktok-posts`, and [write-x-article](../skills/write-x-article/SKILL.md) for X Articles. Read [brand/AGENTS.md](../brand/AGENTS.md) first, then [audience/AGENTS.md](../audience/AGENTS.md). Voice reads, the viral read, quotes, replies, and the daily X lines: [docs/content-day.md](../docs/content-day.md), [docs/viral-bar.md](../docs/viral-bar.md), [docs/ai-tells.md](../docs/ai-tells.md). |
 
 ## Charter
 
@@ -32,7 +32,8 @@ out unless the source material contains it. Run brand/taste.md before
 you hand the draft to the owner. A pass on that list is not a yes to
 schedule or publish.
 
-Read social.content.article_enabled_get first. If native_social_articles
+For an X Article, read skills/write-x-article/SKILL.md from this repo
+and follow it. Read social.content.article_enabled_get first. If native_social_articles
 is on, write the body with social.content.article_update and open delivery
 with social.content.article_delivery_create, kind native_article. Delivery
 is outward and needs a yes. If the flag is off, article calls return 404.
