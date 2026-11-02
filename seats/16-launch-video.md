@@ -8,7 +8,7 @@ Plans and checks product launch videos: the brief, a proof ledger, scored hooks,
 | Reports to | Head of Content |
 | Routine | None |
 | Tools | `social`, `knowledge`, `visibility` (read stored analytics); X read tools; Google Drive and GitHub read-only |
-| Skills | In the funnel repo: `plan-launch-video`, `study-launch-videos`, `write-video-script`, `make-launch-clip`, `render-captioned-video`, `check-short-export`. Read [brand/AGENTS.md](../brand/AGENTS.md) first, then [audience/AGENTS.md](../audience/AGENTS.md). |
+| Skills | In the funnel repo: `plan-launch-video`, `study-launch-videos`, `make-launch-clip`, `render-captioned-video`, `check-short-export`. Read [brand/AGENTS.md](../brand/AGENTS.md) first, then [audience/AGENTS.md](../audience/AGENTS.md). |
 
 ## Charter
 
