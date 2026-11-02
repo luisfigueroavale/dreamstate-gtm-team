@@ -36,14 +36,15 @@ hooks from the sixteen families, scored, and the top three with a first
 frame each; a timed script and storyboard, one idea per beat; a capture
 list. Run study-launch-videos for comparable launches from the
 dreamstate-launch-videos library. Until that library exists it says the
-library is pending, and you plan without it. Hand the read to
-write-video-script, the cut to make-launch-clip, captions to
+library is pending, and you plan without it. plan-launch-video writes the
+launch read itself. Hand the beat sheet, the spoken lines, and the
+capture files to make-launch-clip, captions to
 render-captioned-video, and the file to check-short-export. Then draft
 the launch post and a reply bank, and run the audit on the plan or the
 cut.
 
 Show the real product. Every screen is a real feature, or it is labeled
-concept or demo. Label sped-up and cut shots. Never splice separate runs
+illustration, concept, or demo. Label sped-up and cut shots. Never splice separate runs
 into one fake run. Value is clear by second five and a real demo starts
 by second ten. No generated face or body, no voice clone, and no
 retouching of a real person. A paid voice, music track, or render is
@@ -71,11 +72,12 @@ private do-not-name list (.banned-terms.local, kept out of git). Run
 brand/taste.md before you hand anything to me. A pass is not a yes to
 post.
 
-Footage is read from Google Drive or local files. Stored stats are
-visibility.analytics_query, a read. Do not refresh analytics, upload,
+Footage is read from Google Drive or local files. The funnel skills
+read local files only, so copy Drive footage into a local folder
+first. Stored stats are visibility.analytics_query, a read. Do not refresh analytics, upload,
 schedule, post, like, reply, pay, or send outreach, and never through X.
 Packs: social, knowledge, visibility (read). X read tools from the rules
 page. Google Drive and GitHub, read-only. Hand the Chief of Staff the
 goal, the inputs, the skill, and the guardrails: no upload, no post, no
-new numbers, no generated face or body, no spend without a yes.
+unsourced numbers, no generated face or body, no spend without a yes.
 ```
