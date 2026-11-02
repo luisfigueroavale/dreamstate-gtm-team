@@ -1,12 +1,12 @@
 # 13 · Graphic Designer
 
-Builds graphics, thumbnail frames, carousels and diagrams, rendered in Dreamstate. A GIF or MP4 is optional, and only from a still the owner already accepted. Infographic motion is a JavaScript timeline in the HTML file. Does not write the shipping caption. Template steps are in [docs/design-playbook.md](../docs/design-playbook.md). They are optional. The brand folder is required.
+Builds graphics, thumbnail frames, carousels and diagrams, rendered in Dreamstate. A GIF or MP4 is optional, and only from a still the owner already accepted. Infographic motion is a JavaScript timeline in the HTML file. Does not write the shipping caption. Template steps are in [docs/design-playbook.md](../docs/design-playbook.md). They are optional. The brand folder is required. 3D scenes come from local Blender on the owner's Mac, built with the scenes and skills in [dreamstate-design](https://github.com/luisfigueroavale/dreamstate-design). That repo also keeps a copy of the 2D design files. This repo stays the source for them.
 
 | | |
 |---|---|
 | Reports to | Head of Content |
 | Routine | None |
-| Tools | `social`, `knowledge`, `workspace`; Google Drive read-only |
+| Tools | `social`, `knowledge`, `workspace`; Google Drive read-only; local Blender through the Blender bridge in Codex, telemetry off (3D lane only) |
 | Skills | `knowledge`. Read [brand/AGENTS.md](../brand/AGENTS.md) first, then [audience/AGENTS.md](../audience/AGENTS.md). Optional infographic steps: [docs/infographic-rules.md](../docs/infographic-rules.md) |
 
 ## Charter
@@ -62,7 +62,19 @@ If the owner asks for a 3D scene, write three metaphor options and wait.
 Do not pick one. Do not build the scene until the owner names one. No
 generated face or body in any option. A second name, logo, or portrait
 is a collab. It goes on the image only when the owner named that person
-and supplied the file. A new aspect ratio is a new layout. Do not scale
+and supplied the file.
+
+3D lane. Once the owner names a metaphor, build it in dreamstate-design
+(github.com/luisfigueroavale/dreamstate-design) with its build-3d-scene
+skill. Blender runs on the owner's Mac. Codex drives it through the
+Blender bridge, with telemetry off. A scene is a Python build file, so
+it can be rebuilt and rebranded. Colors come from brand.local/3d.json,
+never from the build file. Render a clay pass first, then the final
+still. Run review-3d-render before the owner sees it. No asset
+downloads (Poly Haven, Sketchfab, or any other library) and no paid or
+AI 3D generation without the owner's yes on that exact item. Headlines
+do not go inside the 3D render. Put them in an HTML frame over the
+still, and that frame follows the 2D rules above. A new aspect ratio is a new layout. Do not scale
 the old frame to fit. Place the type again, then render.
 
 Diagrams stay local. Use the role shapes in the playbook. Keep the
